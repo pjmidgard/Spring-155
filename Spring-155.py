@@ -91,6 +91,7 @@ class compression:
                     Translate_info_Decimal=""
 
                     D=0
+                    Circle_times2=0
 
                     
                     
@@ -194,15 +195,12 @@ class compression:
 
                                     from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
                                     y = ParameterVector("x", 4000)
-                                    circuit = QuantumCircuit(4000) 
+                                    circuit = QuantumCircuit(4000)
+
                                     
                                     Extract1=0
                                     Times_10=1
                                     Times_7=0
-                                    non_integers=0
-                                    
-                                    non_integers2=""
-                                    non_integers3=0
                                     between_of_the_cirlce_of_the_file5=-1
                                     
 
@@ -212,45 +210,23 @@ class compression:
 
                                            
                                             
-                                            circuit.rx(non_integers,0)
-                                            non_integers+=1
-                                            if non_integers>=(2**24)-1:
-                                                non_integers=(2**24)-1
+                                           
                                             
-                              
                                             
-                                          
-                                            
-                                            circuit.rx(between_of_the_cirlce_of_the_file5,0) 
+                                            circuit.rx(between_of_the_cirlce_of_the_file5,0)
                                             between_of_the_cirlce_of_the_file5+=1
-                                            if between_of_the_cirlce_of_the_file5>=(2**16)-1:
-                                               circuit.rx(Times_10,0)  
-                                               Times_10+=1
-                                               between_of_the_cirlce_of_the_file5=0
-                                               
-
-                                                
-                                                
-                                                
-                                            if Times_10>=(2**16)-1:
-                                                Times_10=(2**16)-1
-                                            
-                                                
-                                            if Times_10==(2**16)-1 and non_integers==(2**24)-1:
+                                            if between_of_the_cirlce_of_the_file5==(2**16)-1:
+                                                circuit.rx(Times_10,0)
+                                                Times_10+=1
+                                                between_of_the_cirlce_of_the_file5=0
+                                            if Times_10==(2**16)-1:
                                                 circuit.rx(Times_7,0)
-                                              
                                                 Times_7+=1
-                                           
                                                 Times_10=1
-                                                non_integers=0
-
-                                                
-                                            
-                                           
                                                 between_of_the_cirlce_of_the_file5=0
                                             
                                                 
-                                                                                    
+                                            
                                             
                                             
                                            
@@ -261,7 +237,6 @@ class compression:
                                             long_T=(long_T//8)+1
                                             Combinate=""
                                             Combinate="0"+str(long_T*8)+"b"
-                                            
  
                                             
                                             Equal_info_between_of_the_cirlce_of_the_file2=""
@@ -272,25 +247,19 @@ class compression:
                                             Equal_info_between_of_the_cirlce_of_the_file2=format(between_of_the_cirlce_of_the_file5,'016b')
                                             Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')
                                             Equal_info_between_of_the_cirlce_of_the_file4=format(Times_8,Combinate)
-                                            non_integers2=format(non_integers,'024b') 
-                                             
                                             
                                             Info=Equal_info_between_of_the_cirlce_of_the_file4
-                                            
-                                            
-                                            B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+non_integers2+non_integers2+Info,2)
+                                            B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Info,2)
                                             if B>A:
                                                 Times_10=0
                                             
-                                            #print(B)
                                                
                                            
                                             
-                                            Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')                                            
+                                            Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')
+                                                                                     
                                             
-                                                                                   
-                                            
-                                                                                         
+                                                                                            
                                                 
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file4
     
@@ -365,19 +334,14 @@ class compression:
                         
                                                                                                     
                                                     Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file4, 2)
-                                                                                                     
 
                                                 else:
                                                     Number_of_the_file=0
                                                 
-                                                
-                                                
-                                                Hole_Number_information=(2**Deep5)
+                                                Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
-                                                non_integers3=str(Number_of_the_file)+"."+str(non_integers)
-                                                add_ones_together=float(non_integers3)
-                                                Number_of_the_file=Number_of_the_file**add_ones_together
-                                                Number_of_the_file=int(Number_of_the_file)                                    
+                                                Number_of_the_file=Number_of_the_file*add_ones_together
+                                                
                                                 #print(Number_of_the_file)
                                                         
                                                
@@ -438,14 +402,14 @@ class compression:
                                                                         add_bits="0"+add_bits
                                                                         z=z+1
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
-                                                                                
+                                                                                         
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+non_integers2+Info
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Info
       
                                                     Extract1=1
 
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+non_integers2+sda
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+sda
                                                     Extract1=1
                                                     
                                                         
@@ -472,7 +436,7 @@ class compression:
                                             return print(x3)
                                     		
                                 if i==2:
-                                    
+                                  
 
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                               
@@ -494,8 +458,7 @@ class compression:
                                     Times_6=""
                                 
                                     Number_of_the_file=0
-                                    non_integers3=0
-                                    non_integers2=""
+                                  
 
                                     
                                  
@@ -518,12 +481,6 @@ class compression:
                                                 Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 T = int(Times_6, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                
-                                                non_integers=Equal_info_between_of_the_cirlce_of_the_file[0:24]
-                                                                                               
-                                                
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
-                                                                                               
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 print("Deep: ")
                                                 print(Deep7-25)
@@ -537,10 +494,6 @@ class compression:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[0:lenf6-Deep4]
-                                                non_integers2=int(non_integers,2)
-                                                
-                                               
-                                                
 
                                                    
                                                 if len (Equal_info_between_of_the_cirlce_of_the_file)!=0:
@@ -549,20 +502,14 @@ class compression:
                                                     Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file, 2)
 
                                                 else:
-                                                     Number_of_the_file=0
-   
-                                             
+                                                    Number_of_the_file=0
+                                                                                                    
+                                                Hole_Number_information=(2**Deep5)-1
 
-                                                Hole_Number_information=(2**Deep5)
                                                 add_ones_together=Hole_Number_information
-                                                non_integers3=str(Number_of_the_file)+"."+str(non_integers)
-                                                add_ones_together=float(non_integers3)
-                                                Number_of_the_file=Number_of_the_file**add_ones_together
-                                                Number_of_the_file=int(Number_of_the_file) 
-
-                                                      
+                                                Number_of_the_file=Number_of_the_file*add_ones_together
+                                             
                                                 
-                                                                                              
                                        
                                     
                                       
