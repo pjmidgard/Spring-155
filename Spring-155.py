@@ -113,7 +113,7 @@ class compression:
 
                         lenf1=len(data)
                         lenf7=len(data)
-                        if lenf7==0 or lenf7>(2**40)-1:
+                        if lenf7==0:
                         	 raise SystemExit
                         
                         END_working=0
@@ -448,7 +448,19 @@ class compression:
                                                     Extract1=1
                                                 if Extra_byte=="00000001":
                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
-                                                   Extract1=1
+                                                   
+                                                   lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                   add_bits=""
+                                                   count_bits=8-lenf%8
+                                                   z=0
+                                                   if count_bits!=0:
+                                                      if count_bits!=8:
+                                                         while z<count_bits:
+                                                               add_bits="0"+add_bits
+                                                               z=z+1
+                                                   Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                                   
+Extract1=1
                                                         
                                     if Extract1==1:                
                                             L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
