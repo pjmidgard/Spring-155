@@ -195,9 +195,9 @@ class compression:
                                 
                                 
                                 if i==1:
-                                    #from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    #y = ParameterVector("x", 4000)
-                                    #circuit = QuantumCircuit(4000) 
+                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    y = ParameterVector("x", 4000)
+                                    circuit = QuantumCircuit(4000) 
                                     
                                     Extract1=0
                                     Times_10=1
@@ -216,21 +216,21 @@ class compression:
                                             
                                             
                                           
-                                            #circuit.rx(N_5,0)
+                                            circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
                                             if N_5==(2**16)-1:
-                                                #circuit.rx(Times_10,0)
+                                                circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 N_5=0
                                             if Times_10==(2**16)-1:
-                                                #circuit.rx(Times_11,0)  
+                                                circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
                                             if Times_11==(2**8)-1:
                                                 
-                                                #circuit.rx(Times_7,0)
+                                                circuit.rx(Times_7,0)
                                                 Times_7+=1
                                                
                                                 Times_11=0
@@ -274,17 +274,9 @@ class compression:
                                                 long_of_file=len(Extra_take)
                                                 
                                                 Nuber_zero_or_else=int(Extra_take,2)
-                                                long_of_file+=1
-                                                #print(long_of_file)
-                                                if Nuber_zero_or_else==0 and long_of_file<256:
-                                                                                             long_of_file_N=format(long_of_file,'08b')
-                                                                                             Compress_zeros=long_of_file_N
-                                                                                             #print(Compress_zeros)
-                                                                                                                                                  
-                                                elif Nuber_zero_or_else==0 and long_of_file>255:
-                                                          
-
-                                                        long_of_file-=1
+                                                #print(Extra_take)
+                                                
+                                                if Nuber_zero_or_else==0:
                                                         Extra_byte="00000001"
                                                         long_of_file_N=format(long_of_file,'08b')
                                                         Compress_zeros=Extra_byte+long_of_file_N
@@ -395,7 +387,7 @@ class compression:
                                             
                                             
                                             
-                                           # Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                            Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                              
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
                                             #print(Equal_info_between_of_the_cirlce_of_the_file_17)
@@ -446,15 +438,15 @@ class compression:
                                                                         z=z+1
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                                                              
-                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and Nuber_zero_or_else!=0:
+                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info
       
                                                     Extract1=1
 
-                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0 and Nuber_zero_or_else!=0:
+                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+sda
                                                     Extract1=1
-                                                if Nuber_zero_or_else==0:
+                                                if Extra_byte=="00000001":
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
                                                    
                                                         lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
@@ -469,7 +461,6 @@ class compression:
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                                    
                                                         Extract1=1
-                                                 
                                                         
                                     if Extract1==1:                
                                             L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
@@ -525,7 +516,7 @@ class compression:
                                     
                                  
 
-                                    Circle_times2=0
+                                    
                                  
                                     if C==1:
                                         
@@ -554,21 +545,10 @@ class compression:
                                                 Deep7=Deep5-2
                                                 
                                                 Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:16]
-                                                if len(Times_6)!=0:
-                                                    T = int(Times_6, 2)
-                                                    
-                                                else:
-                                                    T=-1
-                                               
-                                               
+                                                T = int(Times_6, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:8]
-                                                if len(Times_11)!=0:
-                                                    Add = int(Times_11, 2)
-                                                else:
-                                                    Add=-1
-                                               
-                                              
+                                                Add = int(Times_11, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 
                                                 
@@ -576,13 +556,13 @@ class compression:
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 #print("Deep: ")
                                                 #print(Deep7-25)
-                                               
+                                                
                                         if   Circle_times2>0:
                                         	Translate_info_Decimal_2=0
                                         
                                         	
     
-                                        if C==1 and T!=0 and Extra_byte=="00000000":
+                                        if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)                                                        
                                             
@@ -634,82 +614,26 @@ class compression:
                                         Make_togher=Times_6
                                         Number_add_plus_one=""
                                         add_bits=""
-                                        if C==1 and T!=0 and len(Extra_byte)!=1 and T!=-1 and Extra_byte=="00000000":
- 
+                                        if C==1 and T!=0:
                                                 Circle_times2=Circle_times2+1
 
                                         lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                         #print(Circle_times2)
                                         
                                         
-                                        lenf9=len(sda)
-                                    
-                                        
-                                        
-                                        
-                                        if  C==1 and lenf9==8:
-                                                    Number_zeroes=int(Extra_byte,2)
+                                        if  Circle_times2==T:
+
+                                            if Extra_byte=="00000001":
+                                                    Number_zeroes=int(Extract_zeros,2)
                                                     #print(Number_zeroes)
-                                                    Number_zeroes-=1
-                                                   
                                                     Number_zeroes1=0
                                                     while Number_zeroes!=Number_zeroes1:
                                                             Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17+"0"
-                                                            Number_zeroes1+=1                                                
-
-                                        if lenf9!=8:
-                                            Number_zeroes=int(sda[8:],2)
-                                            print(Number_zeroes)
-                                            Number_zeroes1=0
-                                            while Number_zeroes!=Number_zeroes1:
-                                                  Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17+"0"
-                                                  Number_zeroes1+=1
-                                                  lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                            	#print(lenf14)
-
-                                            		
-                                            	
-                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                            add_bits=""
-                                            count_bits=8-lenf%8
-                                            z=0
-                                            if count_bits!=0:
-                                               if count_bits!=8:
-                                            	   while z<count_bits:
-                                            	        add_bits="0"+add_bits
-                                            	        z=z+1
-                                            Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17[8:]
-
-                                            L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                         
-                                            n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
-                                            width_bits=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                            width_bits=(width_bits//8)*2
-                                            width_bits=str(width_bits)
-                                            width_bits="%0"+width_bits+"x"
-                                            width_bits3=binascii.unhexlify(width_bits % n)
-                                            width_bits2=len(width_bits3)
-
-                                            add_bitszzza=""
-                                            add_bitszs=""
-                                            Equal_info_between_of_the_cirlce_of_the_file_2=Times_6
-                                            
-                                            
-                                             
-                                            with open(nameas, "wb") as f2:
-                                            
-                                              
-                                            	f2.write(width_bits3)
-
-                                            x2 = time()
-                                            x3=x2-x
-                                            xs=float(x3)
-                                            return print(x3)  
-                                                            
-                                                         
+                                                            Number_zeroes1+=1
+                                                            #print(Number_zeroes1)
                                                             
                                         	   
-                                        elif C==1 and T==0 and   Circle_times2==T:
+                                            elif C==1 and T==0 and Extra_byte=="00000000":
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file
                                             	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	add_bits=""
@@ -722,26 +646,24 @@ class compression:
                                             	            	z=z+1
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                         
-                                        elif C==1 and T!=0 and Extra_byte=="00000000":
+                                            elif C==1 and T!=0 and Extra_byte=="00000000":
  
-                                            Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
-                                        if C==1 and Circle_times2==T or T==-1:
-                                    
-                                            lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                            	Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                            	lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
 
                                             		
                                             	
-                                            lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                            add_bits=""
-                                            count_bits=8-lenf%8
-                                            z=0
-                                            if count_bits!=0:
-                                               if count_bits!=8:
-                                            	   while z<count_bits:
-                                            	        add_bits="0"+add_bits
-                                            	        z=z+1
-                                            Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                            	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                            	add_bits=""
+                                            	count_bits=8-lenf%8
+                                            	z=0
+                                            	if count_bits!=0:
+                                            	        if count_bits!=8:
+                                            	            while z<count_bits:
+                                            	            	add_bits="0"+add_bits
+                                            	            	z=z+1
+                                            	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
 
                                             L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                          
@@ -756,8 +678,6 @@ class compression:
                                             add_bitszzza=""
                                             add_bitszs=""
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Times_6
-                                            
-                                            
                                              
                                             with open(nameas, "wb") as f2:
                                             
@@ -767,7 +687,7 @@ class compression:
                                             x2 = time()
                                             x3=x2-x
                                             xs=float(x3)
-                                            return print(x3)  
+                                            return print(x3)
    
 d=compression()
 
