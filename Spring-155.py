@@ -176,6 +176,7 @@ class compression:
                                             z=z+1
 
                                     Equal_info_between_of_the_cirlce_of_the_file_2=sda
+                                    Extra_take=Equal_info_between_of_the_cirlce_of_the_file_2
                                    
                                     
                                     
@@ -270,10 +271,12 @@ class compression:
                                             if B>A:
                                                 Times_10=0
                                                 
-                                                long_of_file=len(Equal_info_between_of_the_cirlce_of_the_file_2)
+                                                long_of_file=len(Extra_take)
                                                 
-                                                Nuber_zero_or_else=(Equal_info_between_of_the_cirlce_of_the_file_2,2)
-                                                if Nuber_zero_or_else:
+                                                Nuber_zero_or_else=int(Extra_take,2)
+                                                #print(Extra_take)
+                                                
+                                                if Nuber_zero_or_else==0:
                                                         Extra_byte="00000001"
                                                         long_of_file_N=format(long_of_file,'040b')
                                                         Compress_zeros=Extra_byte+long_of_file_N
@@ -539,8 +542,8 @@ class compression:
                                                 
                                                                                                
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                print("Deep: ")
-                                                print(Deep7-25)
+                                                #print("Deep: ")
+                                                #print(Deep7-25)
                                                 
                                         if   Circle_times2>0:
                                         	Translate_info_Decimal_2=0
