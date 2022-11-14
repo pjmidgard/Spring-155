@@ -279,7 +279,7 @@ class compression:
                                                 if Nuber_zero_or_else==0 and long_of_file<256:
                                                                                              long_of_file_N=format(long_of_file,'08b')
                                                                                              Compress_zeros=long_of_file_N
-                                                                                             print(Compress_zeros)
+                                                                                             #print(Compress_zeros)
                                                                                                                                                   
                                                 elif Nuber_zero_or_else==0 and long_of_file>255:
                                                           
@@ -676,10 +676,10 @@ class compression:
                                             	            	z=z+1
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                         
-                                    elif C==1 and T!=0 and Extra_byte=="00000000":
+                                        elif C==1 and T!=0 and Extra_byte=="00000000":
  
                                             Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
-                                    if C==1 and Circle_times2==T or T==-1:                                            
+                                        if C==1 and Circle_times2==T or T==-1:                                            
                                             lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
 
