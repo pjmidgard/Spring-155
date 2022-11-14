@@ -274,9 +274,12 @@ class compression:
                                                 long_of_file=len(Extra_take)
                                                 
                                                 Nuber_zero_or_else=int(Extra_take,2)
-                                                #print(Extra_take)
-                                                
-                                                if Nuber_zero_or_else==0:
+                                                long_of_file=long_of_file+1
+                                                if Nuber_zero_or_else==0 and long_of_file>0 and long_of_file<256:
+                                                                                             long_of_file_N=format(long_of_file,'08b')
+                                                                                             Compress_zeros=Extra_byte+long_of_file_N
+                                                                                                                                                  
+                                                elif Nuber_zero_or_else==0 and long_of_file>255:
                                                         Extra_byte="00000001"
                                                         long_of_file_N=format(long_of_file,'08b')
                                                         Compress_zeros=Extra_byte+long_of_file_N
@@ -387,7 +390,7 @@ class compression:
                                             
                                             
                                             
-                                            Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                           # Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                              
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
                                             #print(Equal_info_between_of_the_cirlce_of_the_file_17)
@@ -622,8 +625,15 @@ class compression:
                                         
                                         
                                         if  Circle_times2==T:
+                                            if lenf9==1:
+                                                    Number_zeroes=int(Extract_zeros,2)
+                                                    #print(Number_zeroes)
+                                                    Number_zeroes1=0
+                                                    while Number_zeroes!=Number_zeroes1:
+                                                            Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17+"0"
+                                                            Number_zeroes1+=1                                                
 
-                                            if Extra_byte=="00000001":
+                                            elif Extra_byte=="00000001" and lenf9!=1:
                                                     Number_zeroes=int(Extract_zeros,2)
                                                     #print(Number_zeroes)
                                                     Number_zeroes1=0
