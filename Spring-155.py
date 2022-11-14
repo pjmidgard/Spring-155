@@ -653,7 +653,7 @@ class compression:
                                                             Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17+"0"
                                                             Number_zeroes1+=1                                                
 
-                                        elif Extra_byte=="00000001":
+                                        elif Extra_byte=="00000001" and lenf9!=1:
                                                     Number_zeroes=int(Extract_zeros,2)
                                                     #print(Number_zeroes)
                                                     Number_zeroes1=0
