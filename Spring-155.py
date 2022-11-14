@@ -679,6 +679,7 @@ class compression:
                                     elif C==1 and T!=0 and Extra_byte=="00000000":
  
                                             Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                    if C==1 and Circle_times2==T or T==-1:                                            
                                             lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
 
@@ -694,7 +695,7 @@ class compression:
                                             	        add_bits="0"+add_bits
                                             	        z=z+1
                                             Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
-                                    if C==1:
+
                                             L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                          
                                             n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
