@@ -278,7 +278,7 @@ class compression:
                                                 
                                                 if Nuber_zero_or_else==0:
                                                         Extra_byte="00000001"
-                                                        long_of_file_N=format(long_of_file,'040b')
+                                                        long_of_file_N=format(long_of_file,'08b')
                                                         Compress_zeros=Extra_byte+long_of_file_N
                                                 
                                             
@@ -450,15 +450,15 @@ class compression:
                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
                                                    
                                                    lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                   add_bits=""
-                                                   count_bits=8-lenf%8
-                                                   z=0
-                                                   if count_bits!=0:
-                                                      if count_bits!=8:
-                                                         while z<count_bits:
-                                                               add_bits="0"+add_bits
-                                                               z=z+1
-                                                   Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                                        add_bits=""
+                                                        count_bits=8-lenf%8
+                                                        z=0
+                                                        if count_bits!=0:
+                                                                if count_bits!=8:
+                                                                    while z<count_bits:
+                                                                        add_bits="0"+add_bits
+                                                                        z=z+1
+                                                        Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                                    
 Extract1=1
                                                         
