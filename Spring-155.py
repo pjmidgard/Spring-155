@@ -447,9 +447,9 @@ class compression:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+sda
                                                     Extract1=1
                                                 if Extra_byte=="00000001":
-                                                   Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
+                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
                                                    
-                                                   lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                        lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                                         add_bits=""
                                                         count_bits=8-lenf%8
                                                         z=0
