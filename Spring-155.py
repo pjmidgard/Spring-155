@@ -285,13 +285,7 @@ class compression:
                                                                                              Compress_zeros=long_of_file_N
                                                                                              #print(Compress_zeros)
                                                                                                                                                   
-                                                elif Nuber_zero_or_else==0 and long_of_file>(2**40)-1:
-                                                          
 
-                                                        long_of_file-=1
-                                                        Extra_byte="00000001"
-                                                        long_of_file_N=format(long_of_file,'08b')
-                                                        Compress_zeros=Extra_byte+long_of_file_N
                                                 
                                             
                                             #print(B)
