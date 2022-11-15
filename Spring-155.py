@@ -110,9 +110,11 @@ class compression:
                         data = binary_file.read()
       
                         s=str(data)
+                        T=-1
 
                         lenf1=len(data)
                         lenf7=len(data)
+                        Extra_byte="00000001"
                         if lenf7==0 or lenf7>(2**40)-1:
                         	 raise SystemExit
                         
@@ -195,9 +197,9 @@ class compression:
                                 
                                 
                                 if i==1:
-                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    y = ParameterVector("x", 4000)
-                                    circuit = QuantumCircuit(4000) 
+                                    #from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    #y = ParameterVector("x", 4000)
+                                    #circuit = QuantumCircuit(4000) 
                                     
                                    
                                     Nuber_zero_or_else=1
@@ -218,21 +220,21 @@ class compression:
                                             
                                             
                                           
-                                            circuit.rx(N_5,0)
+                                            #circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
                                             if N_5==(2**16)-1:
-                                                circuit.rx(Times_10,0)
+                                                #circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 N_5=0
                                             if Times_10==(2**16)-1:
-                                                circuit.rx(Times_11,0)  
+                                                #circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
                                             if Times_11==(2**8)-1:
                                                 
-                                                circuit.rx(Times_7,0)
+                                                #circuit.rx(Times_7,0)
                                                 Times_7+=1
                                                
                                                 Times_11=0
@@ -530,7 +532,7 @@ class compression:
                                     
                                  
                                     if C==1:
-                                        T=-1
+                                        
                                         
                                         
                                            
@@ -642,7 +644,10 @@ class compression:
                                         Make_togher=Times_6
                                         Number_add_plus_one=""
                                         add_bits=""
-                                        if C==1 and T!=0 and T!=-1:
+                                       
+                                        if len(sda)>6*8:
+                                       
+                                                
                                                 Circle_times2=Circle_times2+1
 
                                         lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
@@ -652,7 +657,7 @@ class compression:
                                         lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                         
                                         
-                                        if  C==1 and lenf9<6:
+                                        if  C==1 and len(sda)<6*8:
                                                     Number_zeroes=int(sda,2)
                                                     #print(Number_zeroes)
                                                     Number_zeroes-=1
@@ -666,7 +671,7 @@ class compression:
                                                             #print(Number_zeroes1)
                                                             
                                         	   
-                                        elif C==1 and T==0 and Extra_byte=="00000000" and  Circle_times2==T:
+                                        if C==1 and T==0 and Extra_byte=="00000000" and  Circle_times2==T:
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file
                                             	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	add_bits=""
@@ -679,11 +684,11 @@ class compression:
                                             	            	z=z+1
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                         
-                                        elif C==1 and T!=0 and Extra_byte=="00000000" and  Circle_times2==T:
+                                        if C==1 and T!=0 and Extra_byte=="00000000" and  Circle_times2==T:
  
                                             Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                             #print("ok")
-                                        if C==1 and Circle_times2==T or T==-1 or  lenf9<6:                                    
+                                        if C==1 and len(sda)>6*8 and Circle_times2==T or len(sda)<6*8:                                    
                                             lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
 
