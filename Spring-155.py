@@ -530,9 +530,11 @@ class compression:
                                     
                                  
                                     if C==1:
+                                        T=-1
+                                        
                                         
                                            
-                                        if   Circle_times2==0:
+                                        if   Circle_times2==0 and len(sda)>5*8:
 
                                                 Extra_byte=Equal_info_between_of_the_cirlce_of_the_file[0:8]
 
@@ -544,13 +546,13 @@ class compression:
                                                 Equal_info_between_of_the_cirlce_of_the_file=sda
                                 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                if len(sda)>5:
+                                                if len(sda)>5*8:
                                                     Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 sda10=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 #print(Equal_info_between_of_the_cirlce_of_the_file)
 
-                                                
-                                                Deep5 = int(sda10, 2)
+                                                if len(sda)>5*8:
+                                                    Deep5 = int(sda10, 2)
                                                 Deep5=Deep5+2
                                                 Deep4=Deep5-1
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
@@ -588,7 +590,7 @@ class compression:
                                         
                                         	
     
-                                        if C==1 and T!=0 and len(Extra_byte)!=1 and T!=-1:
+                                        if C==1 and T!=0 and T!=-1:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)                                                        
                                             
@@ -640,7 +642,7 @@ class compression:
                                         Make_togher=Times_6
                                         Number_add_plus_one=""
                                         add_bits=""
-                                        if C==1 and T!=0 and len(Extra_byte)!=1 and T!=-1:
+                                        if C==1 and T!=0 and T!=-1:
                                                 Circle_times2=Circle_times2+1
 
                                         lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
