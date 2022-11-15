@@ -197,9 +197,9 @@ class compression:
                                 
                                 
                                 if i==1:
-                                    #from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    #y = ParameterVector("x", 4000)
-                                    #circuit = QuantumCircuit(4000) 
+                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    y = ParameterVector("x", 4000)
+                                    circuit = QuantumCircuit(4000) 
                                     
                                    
                                     Nuber_zero_or_else=1
@@ -220,21 +220,21 @@ class compression:
                                             
                                             
                                           
-                                            #circuit.rx(N_5,0)
+                                            circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
                                             if N_5==(2**16)-1:
-                                                #circuit.rx(Times_10,0)
+                                                circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 N_5=0
                                             if Times_10==(2**16)-1:
-                                                #circuit.rx(Times_11,0)  
+                                                circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
                                             if Times_11==(2**8)-1:
                                                 
-                                                #circuit.rx(Times_7,0)
+                                                circuit.rx(Times_7,0)
                                                 Times_7+=1
                                                
                                                 Times_11=0
@@ -399,7 +399,9 @@ class compression:
                                             
                                             
                                             
-                                           # Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+    
+                                            if  Nuber_zero_or_else!=0:
+                                                     Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                              
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
                                             #print(Equal_info_between_of_the_cirlce_of_the_file_17)
@@ -449,7 +451,7 @@ class compression:
                                                                         add_bits="0"+add_bits
                                                                         z=z+1
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
-                                                                             
+                                                #print(Equal_info_between_of_the_cirlce_of_the_file_17)              
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info
       
