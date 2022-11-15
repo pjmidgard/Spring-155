@@ -677,7 +677,7 @@ class compression:
                                             	            	z=z+1
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                         
-                                        elif C==1 and T!=0 and Extra_byte=="00000001" and  Circle_times2==T:
+                                        elif C==1 and T!=0 and Extra_byte=="00000000" and  Circle_times2==T:
  
                                             Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                             #print("ok")
