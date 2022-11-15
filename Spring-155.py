@@ -690,7 +690,7 @@ class compression:
  
                                             Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                             #print("ok")
-                                        if C==1 and len(sda)>6*8 and Circle_times2==T or len(sda)<6*8:                                    
+                                        if C==1 and len(sda)>5*8 and Circle_times2==T or len(sda)<6*8:                                    
                                             lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
 
