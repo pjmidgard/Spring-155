@@ -113,7 +113,7 @@ class compression:
 
                         lenf1=len(data)
                         lenf7=len(data)
-                        if lenf7==0 or lenf7>(2**32)-1:
+                        if lenf7==0 or lenf7>(2**40)-1:
                         	 raise SystemExit
                         
                         END_working=0
@@ -188,7 +188,7 @@ class compression:
                                 lenf2=len(Equal_info_between_of_the_cirlce_of_the_file_2)
                                 #print(lenf2)
                                 if i==1:
-                                    if lenf7>(2**32)-1:
+                                    if lenf7>(2**40)-1:
                                         raise SystemExit
 
                                 #########################################################################################################################################################
@@ -278,12 +278,12 @@ class compression:
                                                 Nuber_zero_or_else=int(Extra_take,2)
                                                 long_of_file+=1
                                                 #print(long_of_file)
-                                                if Nuber_zero_or_else==0 and long_of_file<(2**32):
+                                                if Nuber_zero_or_else==0 and long_of_file<(2**40):
                                                                                              long_of_file_N=format(long_of_file,'08b')
                                                                                              Compress_zeros=long_of_file_N
                                                                                              #print(Compress_zeros)
                                                                                                                                                   
-                                                elif Nuber_zero_or_else==0 and long_of_file>(2**32)-1:
+                                                elif Nuber_zero_or_else==0 and long_of_file>(2**40)-1:
                                                           
 
                                                         long_of_file-=1
