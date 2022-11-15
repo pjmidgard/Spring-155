@@ -647,7 +647,7 @@ class compression:
                                         Number_add_plus_one=""
                                         add_bits=""
                                        
-                                        if len(sda)>6*8:
+                                        if len(sda)>5*8:
                                        
                                                 
                                                 Circle_times2=Circle_times2+1
