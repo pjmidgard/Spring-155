@@ -199,7 +199,7 @@ class compression:
                                 if i==1:
 
                                     if sda=="11110110011000000110101111110000100010010101000001000011":
-                                                    width_bits3=b'\x00\x00\x00\x00\x00\x01'   
+                                                    width_bits3=b'\x00'   
                                             
                                                     with open(nameas, "wb") as f2:
                                             
@@ -526,7 +526,7 @@ class compression:
 
                                     if sda[0:8]=="00000000" and sda[32:40]=="00000000":
                                                     width_bits3=b'\xf6\x60\x6b\xf0\x89\x50\x43'
-     
+    
                                             
                                                     with open(nameas, "wb") as f2:
                                             
@@ -698,7 +698,7 @@ class compression:
 
                                                             #print(Number_zeroes1)
                                                             
-                                        	   
+                                     	   
                                         if C==1 and T==0 and Extra_byte=="00000000" and  Circle_times2==T:
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file
                                             	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
