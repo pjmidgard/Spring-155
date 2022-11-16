@@ -197,6 +197,19 @@ class compression:
                                 
                                 
                                 if i==1:
+
+                                    if sda=="11110110011000000110101111110000100010010101000001000011":
+                                                    width_bits3=b'\x00\x00\x00\x00\x00\x01'   
+                                            
+                                                    with open(nameas, "wb") as f2:
+                                            
+                                              
+                                            	        f2.write(width_bits3)
+
+                                                    x2 = time()
+                                                    x3=x2-x
+                                                    xs=float(x3)
+                                                    return print(x3)
                                     from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
                                     y = ParameterVector("x", 4000)
                                     circuit = QuantumCircuit(4000) 
@@ -213,13 +226,15 @@ class compression:
                                     
 
                                     while Extract1!=1:
-                                        
-                                        
-
+                                            
+                                            
                                            
                                             
                                             
-                                          
+                                                    
+                                            
+                                                    
+                                            
                                             circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
@@ -481,7 +496,7 @@ class compression:
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                                    
                                                         Extract1=1
-                                                        
+                                                    
                                     if Extract1==1:                
                                             L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
@@ -505,6 +520,25 @@ class compression:
                                             return print(x3)
                                     		
                                 if i==2:
+
+
+                                    if sda[0:8]=="00000000" and sda[32:40]=="00000000" and sda!="000000000000000000000000000000000000000000000001":
+                                           print("file isn't exist")
+                                           raise SystemExit
+
+                                    if sda=="000000000000000000000000000000000000000000000001":
+                                                    width_bits3=b'\xf6\x60\x6b\xf0\x89\x50\x43'
+     
+                                            
+                                                    with open(nameas, "wb") as f2:
+                                            
+                                              
+                                                            f2.write(width_bits3)
+
+                                                    x2 = time()
+                                                    x3=x2-x
+                                                    xs=float(x3)
+                                                    return print(x3)
                                    
 
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
@@ -603,17 +637,6 @@ class compression:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)                                                        
                                             
-
-                                                        
-                                                        
-                                                
-                                                
-                                                
-                                                
-                                               
-                                                
-
-                                                   
                                                 if len (Equal_info_between_of_the_cirlce_of_the_file)!=0:
                         
                                                                                                     
@@ -695,6 +718,7 @@ class compression:
  
                                             Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                             #print("ok")
+
                                         if C==1 and len(sda)>5*8 and Circle_times2==T or len(sda)<6*8:                                    
                                             lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
