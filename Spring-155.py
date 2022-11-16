@@ -392,7 +392,8 @@ class compression:
                                                     Number_of_the_file=0
                                                 
                                                 
-                                                
+if int(Equal_info_between_of_the_cirlce_of_the_file,2)==0   and T==1 and Add==0:
+    Number_of_the_file=1                                  
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
@@ -649,10 +650,13 @@ class compression:
 
                                                       
                                                 
+if int(Equal_info_between_of_the_cirlce_of_the_file,2)==0   and T==1 and Add==0:
+    Number_of_the_file=1                                  
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
                                                 Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
+                                               
                                                                                               
                                        
                                     
