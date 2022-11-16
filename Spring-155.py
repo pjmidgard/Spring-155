@@ -91,6 +91,7 @@ class compression:
                     Translate_info_Decimal=""
 
                     D=0
+                    Z=0
 
                     
                     
@@ -391,7 +392,7 @@ class compression:
                                                 else:
                                                     Number_of_the_file=0
                                                 
-                                                Z=0
+                                                
                                                 if Number_of_the_file==0   and T==1 and Add==0:
                                                     Z=1                                  
                                                 Hole_Number_information=(2**Deep5)-1
@@ -649,7 +650,7 @@ class compression:
 
 
                                                       
-                                                Z=0
+                                                
                                                 if Number_of_the_file==0   and T==1 and Add==0:
                                                     Z=1                                  
                                                 Hole_Number_information=(2**Deep5)-1
