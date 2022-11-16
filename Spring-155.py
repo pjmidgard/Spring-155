@@ -391,13 +391,13 @@ class compression:
                                                 else:
                                                     Number_of_the_file=0
                                                 
-                                                
+                                                Z=0
                                                 if Number_of_the_file==0   and T==1 and Add==0:
-                                                    Add=1                                  
+                                                    Z=1                                  
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
+                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add+Z
                                                                                   
                                                 #print(Number_of_the_file)
                                                         
@@ -649,13 +649,13 @@ class compression:
 
 
                                                       
-                                                
+                                                Z=0
                                                 if Number_of_the_file==0   and T==1 and Add==0:
-                                                    Add=1                                  
+                                                    Z=1                                  
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
+                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add+Z
                                                
                                                                                               
                                        
