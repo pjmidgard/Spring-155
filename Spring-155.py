@@ -393,12 +393,11 @@ class compression:
                                                     Number_of_the_file=0
                                                 
                                                 
-                                                if Number_of_the_file==0   and T==1 and Add==0:
-                                                    Z=1                                  
+                                                                        
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add+Z
+                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
                                                                                   
                                                 #print(Number_of_the_file)
                                                         
@@ -651,12 +650,12 @@ class compression:
 
                                                       
                                                 
-                                                if Number_of_the_file==0   and T==1 and Add==0:
-                                                    Z=1                                  
+                                                                                      
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add+Z
+                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
+                                                
                                                
                                                                                               
                                        
