@@ -91,7 +91,7 @@ class compression:
                     Translate_info_Decimal=""
 
                     D=0
-                    Z=0
+                    
 
                     
                     
