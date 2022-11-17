@@ -525,7 +525,7 @@ class compression:
 
 
                                     
-                                    if sda=="00000000" or int(sda,2)==0:
+                                    if sda=="00000000" or int(sda,2)==0 or sda!="00000000" and len(sda)>40:
                                                     width_bits3=b'\xf6\x60\x6b\xf0\x89\x50\x43'
     
                                             
@@ -703,7 +703,7 @@ class compression:
                                                             #print(Number_zeroes1)
                                                             
                                      	   
-                                        if C==1 and T==0 and Extra_byte=="00000000" and  Circle_times2==T:
+                                        if C==1 and T==0 and Extra_byte=="00000000":
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file
                                             	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	add_bits=""
@@ -721,7 +721,7 @@ class compression:
                                             Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                             #print("ok")
 
-                                        if C==1 and len(sda)>5*8 and Circle_times2==T or len(sda)<6*8:                                    
+                                        if C==1 and len(sda)>5*8 and Circle_times2==T or len(sda)<6*8 or T==0:                               
                                             lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             	#print(lenf14)
 
