@@ -10,3 +10,6 @@ Deep: 7
 7+25=32 bits.
 
 This Quantum program is for Quantum Supercomputers 4000 cubits.
+
+How to use:
+pip install qiskit
