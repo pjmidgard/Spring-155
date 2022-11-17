@@ -525,7 +525,7 @@ class compression:
 
 
                                     
-                                    if sda=="00000000" or int(sda,2)==0 or sda[0:8]!="00000000" and len(sda)>40:
+                                    if int(sda,2)==0 or sda[0:8]!="00000000" and len(sda)>40:
                                                     width_bits3=b'\xf6\x60\x6b\xf0\x89\x50\x43'
     
                                             
