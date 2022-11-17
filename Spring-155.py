@@ -248,12 +248,15 @@ class compression:
                                                 circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
+                                                N_5=0
                                             if Times_11==(2**8)-1:
                                                 
                                                 circuit.rx(Times_7,0)
                                                 Times_7+=1
                                                
                                                 Times_11=0
+                                                Times_10=1
+                                                N_5=0
                                              
                                             
                                              
@@ -692,7 +695,7 @@ class compression:
                                         if  C==1 and len(sda)<6*8:
                                                     Number_zeroes=int(sda,2)
                                                     #print(Number_zeroes)
-                                                    Number_zeroes-=2
+                                                    Number_zeroes-=1
                                                    
                                                     Number_zeroes1=0
                                                     while Number_zeroes!=Number_zeroes1:
