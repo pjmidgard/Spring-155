@@ -191,15 +191,26 @@ class compression:
                                 lenf2=len(Equal_info_between_of_the_cirlce_of_the_file_2)
                                 #print(lenf2)
                                 if i==1:
-                                    if lenf2>(2**40)-1
+                                    if lenf2>(2**40)-1:
                                         raise SystemExit
 
                                 #########################################################################################################################################################
                                 
                                 
                                 if i==1:
+                                    if data=="b\x00x00x00x00x01x01":
+                                                    width_bits3='b\x00x00x00x00x01x01'
+                                            
+                                                    with open(nameas, "wb") as f2:
+                                            
+                                              
+                                            	        f2.write(width_bits3)
 
-                                    if sda=="11110110011000000110101111110000100010010101000001000011":
+                                                    x2 = time()
+                                                    x3=x2-x
+                                                    xs=float(x3)
+                                                    return print(x3)
+                                    elif sda=="11110110011000000110101111110000100010010101000001000011":
                                                     width_bits3=b'\x00'   
                                             
                                                     with open(nameas, "wb") as f2:
@@ -211,9 +222,9 @@ class compression:
                                                     x3=x2-x
                                                     xs=float(x3)
                                                     return print(x3)
-                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    y = ParameterVector("x", 4000)
-                                    circuit = QuantumCircuit(4000) 
+                                    #from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    #y = ParameterVector("x", 4000)
+                                    #circuit = QuantumCircuit(4000) 
                                     
                                    
                                     Nuber_zero_or_else=1
@@ -236,22 +247,22 @@ class compression:
                                             
                                                     
                                             
-                                            circuit.rx(N_5,0)
+                                            #circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
                                             if N_5==(2**16)-1:
-                                                circuit.rx(Times_10,0)
+                                                #circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 N_5=0
                                             if Times_10==(2**16)-1:
-                                                circuit.rx(Times_11,0)  
+                                                #circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
                                                
                                             if Times_11==(2**8)-1:
                                                 
-                                                circuit.rx(Times_7,0)
+                                                #circuit.rx(Times_7,0)
                                                 Times_7+=1
                                                
                                                 Times_11=0
@@ -489,7 +500,7 @@ class compression:
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+sda
                                                     Extract1=1
-                                                if Nuber_zero_or_else==0 and long_of_file<(2**40);
+                                                if Nuber_zero_or_else==0 and long_of_file<(2**40):
                                                        
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
                                                    
