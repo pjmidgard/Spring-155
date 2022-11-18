@@ -239,12 +239,12 @@ class compression:
                                             circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
-                                            if N_5==(2**3)-1:
+                                            if N_5==(2**16)-1:
                                                 circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 N_5=0
-                                            if Times_10==(2**3)-1:
+                                            if Times_10==(2**16)-1:
                                                 circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
