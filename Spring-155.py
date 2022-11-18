@@ -198,19 +198,8 @@ class compression:
                                 
                                 
                                 if i==1:
-                                    if data=="b\x00x00x00x00x01x01":
-                                                    width_bits3='b\x00x00x00x00x01x01'
-                                            
-                                                    with open(nameas, "wb") as f2:
-                                            
-                                              
-                                            	        f2.write(width_bits3)
 
-                                                    x2 = time()
-                                                    x3=x2-x
-                                                    xs=float(x3)
-                                                    return print(x3)
-                                    elif sda=="11110110011000000110101111110000100010010101000001000011":
+                                    if sda=="11110110011000000110101111110000100010010101000001000011":
                                                     width_bits3=b'\x00'   
                                             
                                                     with open(nameas, "wb") as f2:
@@ -308,7 +297,7 @@ class compression:
                                                 
                                                 Nuber_zero_or_else=int(Extra_take,2)
                                                 long_of_file+=1
-                                                print(long_of_file)
+                                                #print(long_of_file)
                                                 if Nuber_zero_or_else==0 and long_of_file<(2**40):
                                                                                              long_of_file_N=format(long_of_file,'08b')
                                                                                              Compress_zeros=long_of_file_N
