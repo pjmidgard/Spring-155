@@ -239,12 +239,12 @@ class compression:
                                             circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
-                                            if N_5==(2**16)-1:
+                                            if N_5==(2**3)-1:
                                                 circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 N_5=0
-                                            if Times_10==(2**16)-1:
+                                            if Times_10==(2**3)-1:
                                                 circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
@@ -297,7 +297,7 @@ class compression:
                                                 
                                                 Nuber_zero_or_else=int(Extra_take,2)
                                                 long_of_file+=1
-                                                #print(long_of_file)
+                                                print(long_of_file)
                                                 if Nuber_zero_or_else==0 and long_of_file<(2**40):
                                                                                              long_of_file_N=format(long_of_file,'08b')
                                                                                              Compress_zeros=long_of_file_N
@@ -476,11 +476,16 @@ class compression:
                                                             z=z+1
                                                 Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17 
           
-                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
+                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and int(Info,2)!=0:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info
+                                                   
       
                                                     Extract1=1
-
+                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and int(Info,2)==0:
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N
+                                                   
+      
+                                                    Extract1=1
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+sda
                                                     Extract1=1
