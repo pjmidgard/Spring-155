@@ -222,9 +222,9 @@ class compression:
                                                     x3=x2-x
                                                     xs=float(x3)
                                                     return print(x3)
-                                    #from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    #y = ParameterVector("x", 4000)
-                                    #circuit = QuantumCircuit(4000) 
+                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    y = ParameterVector("x", 4000)
+                                    circuit = QuantumCircuit(4000) 
                                     
                                    
                                     Nuber_zero_or_else=1
@@ -247,22 +247,22 @@ class compression:
                                             
                                                     
                                             
-                                            #circuit.rx(N_5,0)
+                                            circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
                                             if N_5==(2**16)-1:
-                                                #circuit.rx(Times_10,0)
+                                                circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 N_5=0
                                             if Times_10==(2**16)-1:
-                                                #circuit.rx(Times_11,0)  
+                                                circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
                                                
                                             if Times_11==(2**8)-1:
                                                 
-                                                #circuit.rx(Times_7,0)
+                                                circuit.rx(Times_7,0)
                                                 Times_7+=1
                                                
                                                 Times_11=0
