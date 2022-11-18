@@ -191,7 +191,7 @@ class compression:
                                 lenf2=len(Equal_info_between_of_the_cirlce_of_the_file_2)
                                 #print(lenf2)
                                 if i==1:
-                                    if lenf7>(2**40)-1:
+                                    if lenf2>(2**40)-1
                                         raise SystemExit
 
                                 #########################################################################################################################################################
@@ -489,7 +489,7 @@ class compression:
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+sda
                                                     Extract1=1
-                                                if Nuber_zero_or_else==0:
+                                                if Nuber_zero_or_else==0 and long_of_file<(2**40);
                                                        
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
                                                    
