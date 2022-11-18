@@ -750,7 +750,7 @@ class compression:
                                             if L==0:
                                                width_bits3=b'\xf6\x60\x6b\xf0\x89\x50\x43'
                                                with open(nameas, "wb") as f2:
-                                                                                                              f2.write(width_bits3)
+                                                    f2.write(width_bits3)
 
 
                                                x2 = time()
