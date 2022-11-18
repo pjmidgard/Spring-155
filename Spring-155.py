@@ -248,15 +248,14 @@ class compression:
                                                 circuit.rx(Times_11,0)  
                                                 Times_11+=1
                                                 Times_10=1
-                                                N_5=0
+                                               
                                             if Times_11==(2**8)-1:
                                                 
                                                 circuit.rx(Times_7,0)
                                                 Times_7+=1
                                                
                                                 Times_11=0
-                                                Times_10=1
-                                                N_5=0
+                                               
                                              
                                             
                                              
@@ -345,6 +344,7 @@ class compression:
                                             C=1
                                          
                                             if C==1:
+                                                Add= int(Add_N, 2)
                                                 if   Circle_times2==0:
     
                                                          
@@ -370,7 +370,7 @@ class compression:
                                                         Add_N=Add_N
                                                         
                                                         T = int(Times_6, 2)
-                                                        Add= int(Add_N, 2)
+                                                        
                                                         lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
                                                         #print("Deep: ")
                                                         #print(Deep7-25)
