@@ -274,7 +274,7 @@ class compression:
                                                   
                                                 Times_12=Times_7*255
                                                 Times_7=Times_12
-                                                #Times15+=1
+                                                Times15+=1
                                                 
                                               
 
