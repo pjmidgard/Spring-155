@@ -198,6 +198,7 @@ class compression:
                                 #########################################################################################################################################################
                                 Times_12=0
                                 Times_15=0
+                             
                                 if i==1:
 
                                     if sda=="11110110011000000110101111110000100010010101000001000011":
@@ -249,17 +250,22 @@ class compression:
                                                 Times_7+=1
                                                 
                                                 Times_14=Times_14+1+Times_15
+                                                #print(Number_of_the_file)
                                                 #print(Times_14)
-                                                Times_11+=1
+                                                
                                                
                                             if Times_10==(2**16)-1:
                                                 circuit.rx(Times_11,0)  
+                                                
+                                              
                                                 
                                                 Times_10=1
                                               
                                                 Times_14=Times_7//255
                                                 Times_7=Times_14
+                                                Times_11+=1
                                                 
+                                         
                                                                                                 
                                  
                                             if Times_11==(2**8)-1:
@@ -268,7 +274,9 @@ class compression:
                                                   
                                                 Times_12=Times_7*255
                                                 Times_7=Times_12
-                                                Times15+=1
+                                                #Times15+=1
+                                                
+                                              
 
                                                     
                                               
@@ -407,23 +415,22 @@ class compression:
                                                        
                                                         
                                                        
-                                                if len (Equal_info_between_of_the_cirlce_of_the_file4)!=0:
+                                                        if len (Equal_info_between_of_the_cirlce_of_the_file4)!=0:
                         
                                                                                                     
-                                                    Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file4, 2)
+                                                           Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file4, 2)
                                                                                                      
 
-                                                else:
-                                                    Number_of_the_file=0
+                                                        else:
+                                                           Number_of_the_file=0
                                                 
                                                 
                                                                         
-                                                Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information
+                                                        Hole_Number_information=(2**Deep5)-1
+                                                        add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
- #print(Number_of_the_file)
-                                                        #print(Times_7)
+                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                          #print(Times_7)
                                                         
                                                
 
@@ -684,7 +691,7 @@ class compression:
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
+                                                Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
                                                 
                                                
                                                                                               
