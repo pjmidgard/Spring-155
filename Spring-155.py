@@ -197,7 +197,7 @@ class compression:
 
                                 #########################################################################################################################################################
                                 Times_12=0
-                                
+                                Times_15=0
                                 if i==1:
 
                                     if sda=="11110110011000000110101111110000100010010101000001000011":
@@ -249,11 +249,12 @@ class compression:
                                                 Times_7+=1
                                                 
                                                 Times_14=Times_14+1+Times_15
-                                                print(Times_14)
+                                                #print(Times_14)
+                                                Times_11+=1
                                                
                                             if Times_10==(2**16)-1:
                                                 circuit.rx(Times_11,0)  
-                                                Times_11+=1
+                                                
                                                 Times_10=1
                                               
                                                 Times_14=Times_7//255
@@ -421,8 +422,7 @@ class compression:
                                                 add_ones_together=Hole_Number_information
                                                 
                                                 Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
-                                                #if Times_7>=0:
-                                                        #print(Number_of_the_file)
+ #print(Number_of_the_file)
                                                         #print(Times_7)
                                                         
                                                
