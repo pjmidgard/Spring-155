@@ -256,7 +256,7 @@ class compression:
                                                 Times_11+=1
                                                 Times_10=1
                                               
-                                                Times_14=Times_7//(255*255)
+                                                Times_14=Times_7//255
                                                 Times_7=Times_14
                                                 
                                                                                                 
@@ -265,7 +265,7 @@ class compression:
                                                 
                                                 circuit.rx(Times_7,0)
                                                   
-                                                Times_12=Times_7*(255*255)
+                                                Times_12=Times_7*255
                                                 Times_7=Times_12
                                                 Times15+=1
 
