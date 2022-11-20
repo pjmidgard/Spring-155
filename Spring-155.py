@@ -236,7 +236,7 @@ class compression:
                                             if Times_7==(2**48+N_5)-1:
                                                 N_5+=1
                                                 Times_7=0
-                                                Combinate2=56+N5
+                                                Combinate2=48+N5
                                                 Combinate="0"+str(Combinate2)+"b"
                                             
                                            
