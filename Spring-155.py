@@ -253,14 +253,14 @@ class compression:
                                                 #print(Times_14)
                                                 
                                                
-                                            if Times_10==(2**16)-1:
+                                            if Times_10==(2**8)-1:
                                                 circuit.rx(Times_11,0)  
                                                 
                                               
                                                 
                                                 Times_10=1
                                               
-                                                Times_7=Times_7//65535
+                                                Times_7=Times_7//255
                                                 
                                                 Times_11+=1
                                                 
@@ -319,7 +319,7 @@ class compression:
                                             
                                             B=int(Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
                                             if B>A:
-                                                Times_10=0
+                                                #Times_10=0
                                                 
                                                 long_of_file=len(Extra_take)
                                                 
