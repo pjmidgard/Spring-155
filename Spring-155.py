@@ -253,7 +253,7 @@ class compression:
                                                 #print(Times_14)
                                                 
                                                
-                                            if Times_10==(2**8)-1:
+                                            if Times_10==(2**16)-1:
                                                 circuit.rx(Times_11,0)  
                                                 
                                               
