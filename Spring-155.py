@@ -321,9 +321,9 @@ class compression:
                                             if B>A:
                                                 #Times_10=0
                                                 
-                                                long_of_file=len(Extra_take)
+                                                long_of_file=len(sda)
                                                 
-                                                Nuber_zero_or_else=int(Extra_take,2)
+                                                Nuber_zero_or_else=int(sda,2)
                                                 long_of_file+=1
                                                 #print(long_of_file)
                                                 if Nuber_zero_or_else==0 and long_of_file<(2**40):
