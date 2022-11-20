@@ -196,7 +196,7 @@ class compression:
                                         raise SystemExit
 
                                 #########################################################################################################################################################
-                                Times_12=0
+                            
                                 Times_15=0
                              
                                 if i==1:
@@ -247,9 +247,9 @@ class compression:
                                                 
                                                 Times_10+=1
                                                 N_5=0
-                                                Times_7+=1
+                                                Times_7+=1+Times_15
                                                 
-                                                Times_14=Times_14+1+Times_15
+                                                
                                                 #print(Number_of_the_file)
                                                 #print(Times_14)
                                                 
