@@ -261,8 +261,8 @@ class compression:
                                                 
                                                 Times_10=1
                                               
-                                                Times_14=Times_7//65535
-                                                Times_7=Times_14
+                                                Times_8=Times_7//65535
+                                                
                                                 Times_11+=1
                                                 
                                          
@@ -272,8 +272,8 @@ class compression:
                                                 
                                                 circuit.rx(Times_7,0)
                                                   
-                                                Times_12=Times_7*65535
-                                                Times_7=Times_12
+                                                Times_8=Times_7*255
+                                               
                                                 Times15+=1
                                                 
                                               
@@ -293,7 +293,7 @@ class compression:
                                             #print("7")
                                             #print(Times_7)
                                             
-                                            Times_8=Times_7
+                                            
                                             Times_9=bin(Times_7)[2:]
                                             long_T=len(Times_9)
                                             long_T=(long_T//8)+1
