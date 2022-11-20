@@ -185,6 +185,7 @@ class compression:
                                     
                                     Extact=Equal_info_between_of_the_cirlce_of_the_file_2
                                     A=int(Extact,2)
+                                    #print(Extact)
                                     
 
                                     lenf3=len(Equal_info_between_of_the_cirlce_of_the_file_2)
@@ -222,7 +223,7 @@ class compression:
                                     Times_7=0
                                     Times_11=0
                                     Extra_byte="00000000"
-                                    
+                                  
                                   
                                     Combinate2=40
                                   
@@ -250,9 +251,11 @@ class compression:
                                            
                                              
                                             
+                                                                                       
                                             Equal_info_between_of_the_cirlce_of_the_file4=format(Times_7,Combinate)
-                                            Equal_info_between_of_the_cirlce_of_the_file4="000000000"+Equal_info_between_of_the_cirlce_of_the_file4
-                                            #print(Equal_info_between_of_the_cirlce_of_the_file4)
+                                            Equal_info_between_of_the_cirlce_of_the_file4="00000000"+Equal_info_between_of_the_cirlce_of_the_file4
+                                            #print(len(Equal_info_between_of_the_cirlce_of_the_file4))
+                                            Info=Equal_info_between_of_the_cirlce_of_the_file4
                                             
                                             
                                             if Nuber_zero_or_else==0 and long_of_file<(2**40):
@@ -301,8 +304,8 @@ class compression:
                                             C=1
                                          
                                             if C==1:
-                                                Add= int(Equal_info_between_of_the_cirlce_of_the_file4[32:40],2)
-                                                if   Circle_times2==0:
+                                                Add= int(Equal_info_between_of_the_cirlce_of_the_file4[40:48],2)
+                                                if   C==1:
     
                                                          
     
@@ -313,7 +316,7 @@ class compression:
                                                         
                                                         lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
     
-                                                        sda10=Equal_info_between_of_the_cirlce_of_the_file4[0:16]
+                                                        sda10=Equal_info_between_of_the_cirlce_of_the_file4[8:24]
                                                         Deep5 = int(sda10, 2)
                                                         Deep5=Deep5+2
                                                         Deep4=Deep5-1
@@ -323,10 +326,11 @@ class compression:
                                                         
                                                         Deep7=Deep5-2
                                                         
-                                                        Times_6=Equal_info_between_of_the_cirlce_of_the_file4[16:32]
+                                                        Times_6=Equal_info_between_of_the_cirlce_of_the_file4[24:32]
                                                      
                                                         
                                                         T = int(Times_6, 2)
+                                                        #print(T)
                                                         
                                                         lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
                                                         #print("Deep: ")
@@ -390,19 +394,7 @@ class compression:
                                                 
                                                 if  Circle_times2==T:
                                                            
-                                                    if C==1 and T==0:
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=sda
-                                                        lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                        add_bits=""
-                                                        count_bits=8-lenf%8
-                                                        z=0
-                                                        if count_bits!=0:
-                                                                if count_bits!=8:
-                                                                    while z<count_bits:
-                                                                        add_bits="0"+add_bits
-                                                                        z=z+1
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
-                                                
+
                                                     if C==1 and T!=0:
          
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
@@ -432,17 +424,14 @@ class compression:
                                                             z=z+1
                                                 Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                                 #print(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                #print(T)
           
-                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and int(Equal_info_between_of_the_cirlce_of_the_file4[48:56],2)==0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file4
+                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17:
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Info
                                                    
       
                                                     Extract1=1
-                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and int(Equal_info_between_of_the_cirlce_of_the_file4[48:56],2)==0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file4[:48]
-                                                   
-      
-                                                    Extract1=1
+                                                
 
                                                    
                                                 if Nuber_zero_or_else==0 and long_of_file<(2**40):
