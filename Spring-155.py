@@ -224,19 +224,19 @@ class compression:
                                     Extra_byte="00000000"
                                     
                                   
-                                    Combinate2=48
+                                    Combinate2=40
                                   
                                     N_5=0
-                                    Combinate2=48+N_5
+                                    Combinate2=40+N_5
                                     Combinate="0"+str(Combinate2)+"b"
 
                                     while Extract1!=1:
                                             Times_7+=1
                                             
-                                            if Times_7==(2**48+N_5)-1:
+                                            if Times_7==(2**40+N_5)-1:
                                                 N_5+=1
                                                 Times_7=0
-                                                Combinate2=48+N5
+                                                Combinate2=40+N5
                                                 Combinate="0"+str(Combinate2)+"b"
                                             
                                            
