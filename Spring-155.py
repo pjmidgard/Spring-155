@@ -728,7 +728,7 @@ class compression:
                                         if  C==1 and len(sda)<6*8:
                                                     Number_zeroes=int(sda,2)
                                                     #print(Number_zeroes)
-                                                    Number_zeroes-=1
+                                                    Number_zeroes-=2
                                                    
                                                     Number_zeroes1=0
                                                     while Number_zeroes!=Number_zeroes1:
