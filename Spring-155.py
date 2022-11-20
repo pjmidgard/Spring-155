@@ -227,13 +227,13 @@ class compression:
                                     Combinate2=48
                                   
                                     N_5=0
-                                    Combinate2=56+N_5
+                                    Combinate2=48+N_5
                                     Combinate="0"+str(Combinate2)+"b"
 
                                     while Extract1!=1:
                                             Times_7+=1
                                             
-                                            if Times_7==(2**56+N_5)-1:
+                                            if Times_7==(2**48+N_5)-1:
                                                 N_5+=1
                                                 Combinate2=56+N5
                                                 Combinate="0"+str(Combinate2)+"b"
@@ -250,6 +250,7 @@ class compression:
                                              
                                             
                                             Equal_info_between_of_the_cirlce_of_the_file4=format(Times_7,Combinate)
+                                            Equal_info_between_of_the_cirlce_of_the_file4="000000000"+Equal_info_between_of_the_cirlce_of_the_file4
                                             #print(Equal_info_between_of_the_cirlce_of_the_file4)
                                             
                                             
@@ -356,7 +357,7 @@ class compression:
                                                         add_ones_together=Hole_Number_information
                                                 
                                                         Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
-                                                          #print(Times_7)
+                                                        #print(Number_of_the_file)
                                                         
                                                
 
