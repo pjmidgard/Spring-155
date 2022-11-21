@@ -222,7 +222,7 @@ class compression:
                                     Extract1=0
                                     Times_10=1
                                     Times_7=0
-                                    Times_11=0
+                                    Times_11=-1
                                     Extra_byte="00000000"
                                     
                                     N_5=-1
@@ -239,7 +239,8 @@ class compression:
                                                     
                                             
                                             circuit.rx(N_5,0)
-                                            N_5+=1                                   
+                                            N_5+=1
+                                            Times_11+=1                                   
                                            
                                             if N_5==(2**16)-1:
                                                 circuit.rx(Times_10,0)
@@ -262,7 +263,7 @@ class compression:
                                               
                                                 Times_7=Times_7//65535
                                                 
-                                                Times_11+=1
+                                                
                                                 
                                          
                                                                                                 
