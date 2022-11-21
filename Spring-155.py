@@ -199,8 +199,8 @@ class compression:
                             
                                 Times_15=0
                                 Quater=0
-                               
-            
+                                pender=0
+                                sevender=0
                              
                                 if i==1:
 
