@@ -275,6 +275,7 @@ class compression:
                                                
                                                
                                                 Times15+=1
+                                                Times_11=0
                                                 
                                               
 
