@@ -198,9 +198,6 @@ class compression:
                                 #########################################################################################################################################################
                             
                                 Times_15=0
-                                Quater=0
-                                pender=0
-                                sevender=0
                              
                                 if i==1:
 
@@ -242,22 +239,11 @@ class compression:
                                                     
                                             
                                             circuit.rx(N_5,0)
-                                            N_5+=1    
-                                            Quater+=1
+                                            N_5+=1                                   
                                            
-                                            Times_7+=1   
-                                                                       
-                                            if Quater==2:
-                                                
-                                                Times_7-=1
-                                                Number_of_the_file=Number_of_the_file//65535
-                                                
-                                                Quater=0
-                                                
                                             if N_5==(2**16)-1:
                                                 circuit.rx(Times_10,0)
                                                 
-                                                  
                                                 Times_10+=1
                                                 N_5=0
                                                 Times_7+=1+Times_15
@@ -443,8 +429,7 @@ class compression:
                                                         add_ones_together=Hole_Number_information
                                                 
                                                         Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
-                                                        #print(Number_of_the_file)
-                                                                #print(Times_7)
+                                                          #print(Times_7)
                                                         
                                                
 
