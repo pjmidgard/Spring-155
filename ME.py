@@ -214,8 +214,8 @@ class compression:
                                                     xs=float(x3)
                                                     return print(x3)
                                     from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    y = ParameterVector("x", 5)
-                                    circuit = QuantumCircuit(5) 
+                                    y = ParameterVector("x", 4000)
+                                    circuit = QuantumCircuit(4000) 
                                     
                                    
                                     Nuber_zero_or_else=1
