@@ -611,7 +611,7 @@ class compression:
                                     #long_of_file=-1
 
                                     
-                                 
+                                    C=1
                                     if C==1:
                                         from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
                                         y = ParameterVector("x", 4000)
