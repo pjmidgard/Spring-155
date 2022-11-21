@@ -319,7 +319,8 @@ class compression:
                                             
                                             B=int(Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
                                             if B>A:
-                                                #Times_10=0
+                                                Times_10=0
+
                                                 
                                                 long_of_file=len(sda)
                                                 
