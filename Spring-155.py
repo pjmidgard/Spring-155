@@ -244,7 +244,7 @@ class compression:
                                             Quater+=1
                                             if Quater==(2**24)-1:
                                                 Times_7+=1   
-                                                Quater=0                           
+                                                                       
                                             if Quater==(2**24):
                                                 Times_7=Times_7//65535
                                                 Quater=0
