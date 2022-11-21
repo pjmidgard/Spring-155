@@ -429,12 +429,12 @@ class compression:
                                                         Hole_Number_information=(2**Deep5)-1
                                                         add_ones_together=Hole_Number_information
                                                 
-                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                        Number_of_the_file=(Number_of_the_file*add_ones_together)+Add)
                                                           #print(Times_7)
                                                         
                                                
 
-                                              
+                                             
                                             #####################################################################################################################################################
                                            
                                             
@@ -691,7 +691,7 @@ class compression:
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
                                                 
                                                
                                                                                               
