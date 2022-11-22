@@ -428,7 +428,7 @@ class compression:
                                                         Hole_Number_information=(2**Deep5)-1
                                                         add_ones_together=Hole_Number_information
                                                 
-                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                        Number_of_the_file=Number_of_the_file*add_ones_together
                                                           #print(Times_7)
                                                         
                                                
@@ -458,7 +458,9 @@ class compression:
                                                 lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                                 #print(Circle_times2)
                                                 
-                                                
+                                                if len(Times_11)!=0:
+                                                    Add = int(Times_11, 2)
+                                                Number_of_the_file+=Add                                                
                                                 if  Circle_times2==T:
                                                            
                                                     if C==1 and T==0:
@@ -690,7 +692,7 @@ class compression:
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                Number_of_the_file=Number_of_the_file*add_ones_together
                                                 
                                                
                                                                                               
@@ -722,8 +724,10 @@ class compression:
                                         #print(Circle_times2)
                                         
                                         
-                                        lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                        
+                                        lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)                      
+                                        if len(Times_11)!=0:
+                                           Add = int(Times_11, 2)
+                                        Number_of_the_file+=Add
                                         
                                         if  C==1 and len(sda)<6*8:
                                                     Number_zeroes=int(sda,2)
