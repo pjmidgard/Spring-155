@@ -213,6 +213,7 @@ class compression:
                                                     x3=x2-x
                                                     xs=float(x3)
                                                     return print(x3)
+                                                
                                     from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
                                     y = ParameterVector("x", 4000)
                                     circuit = QuantumCircuit(4000) 
@@ -260,7 +261,7 @@ class compression:
                                                 
                                                 Times_10=1
                                               
-                                                Times_7=Times_7//65535
+                                                #Times_7=Times_7//65535
                                                 
                                                 
                                                 
@@ -319,7 +320,7 @@ class compression:
                                             
                                             B=int(Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
                                             if B>A:
-                                                #Times_10=0
+                                                Times_10=0
                                                 
                                                 long_of_file=len(sda)
                                                 
@@ -370,14 +371,17 @@ class compression:
                                           
     
                                             C=1
-                                            Add= int(Times_11, 2)
+                                            
                                             
                                             divided=0
                                             Number_of_the_file1=int(sda,2)
                                             divided=Number_of_the_file1%3
-                                            divided2=format(divided,'08b') 
+                                            divided2=""
+                                            divided2=format(divided,'08b')
+                                            Add=Times_11
                                                             
                                             if C==1:
+                                                
                                                 
                                                 if   Circle_times2==0:
     
@@ -516,17 +520,17 @@ class compression:
           
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and int(Info,2)!=0:
                                                   
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divide2+Info
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divided2+Info
                                                    
       
                                                     Extract1=1
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and int(Info,2)==0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divide2+Info
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divided2+Info
                                                    
       
                                                     Extract1=1
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divide2+Info
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divided2+Info
                                                     Extract1=1
                                                 if Nuber_zero_or_else==0 and long_of_file<(2**40):
                                                        
