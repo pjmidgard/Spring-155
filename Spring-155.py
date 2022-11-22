@@ -214,9 +214,9 @@ class compression:
                                                     xs=float(x3)
                                                     return print(x3)
                                                 
-                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    y = ParameterVector("x", 4000)
-                                    circuit = QuantumCircuit(4000) 
+                                    #from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    #y = ParameterVector("x", 4000)
+                                    #circuit = QuantumCircuit(4000) 
                                     
                                    
                                     Nuber_zero_or_else=1
@@ -239,11 +239,11 @@ class compression:
                                             
                                                     
                                             Times_11+=1
-                                            circuit.rx(N_5,0)
+                                            #circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
                                             if N_5==(2**16)-1:
-                                                circuit.rx(Times_10,0)
+                                                #circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 N_5=0
@@ -255,7 +255,7 @@ class compression:
                                                 
                                                
                                             if Times_10==(2**16)-1:
-                                                circuit.rx(Times_11,0)  
+                                                #circuit.rx(Times_11,0)  
                                                 
                                               
                                                 
@@ -270,7 +270,7 @@ class compression:
                                  
                                             if Times_11==(2**8)-1:
                                                 
-                                                circuit.rx(Times_7,0)
+                                                #circuit.rx(Times_7,0)
                                                   
                                                 Times_11=0
                                                
@@ -318,19 +318,8 @@ class compression:
                                             Info=Equal_info_between_of_the_cirlce_of_the_file4
                                             
                                             
-                                            B=int(Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
-                                            if B>A:
-                                                Times_10=0
-                                                
-                                                long_of_file=len(sda)
-                                                
-                                                Nuber_zero_or_else=int(sda,2)
-                                                long_of_file+=1
-                                                #print(long_of_file)
-                                                if Nuber_zero_or_else==0 and long_of_file<(2**40):
-                                                                                             long_of_file_N=format(long_of_file,'08b')
-                                                                                             Compress_zeros=long_of_file_N
-                                                                                             #print(Compress_zeros)
+                                            
+                                            
                                                                                                                                                   
 
                                                 
