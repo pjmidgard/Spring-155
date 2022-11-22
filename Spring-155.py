@@ -513,7 +513,7 @@ class compression:
                                                 
                                                 Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 T = int(Times_6, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 Add = int(Times_11, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
