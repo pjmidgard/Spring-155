@@ -561,7 +561,7 @@ class compression:
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=((Number_of_the_file*Number_of_the_file)+Add)*N_5
+                                                Number_of_the_file=((Number_of_the_file*Number_of_the_file)+Add)*Deep5
                                                                                               
                                        
                                     
