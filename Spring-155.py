@@ -457,12 +457,12 @@ class compression:
     
                                                 lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                                 #print(Circle_times2)
-                                                
-                                                if len(Times_11)!=0:
-                                                    Add = int(Times_11, 2)
-                                                Number_of_the_file+=Add
-                                                Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
-                                                Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17    
+                                                if  Circle_times2==T:  
+                                                    if len(Times_11)!=0:
+                                                        Add = int(Times_11, 2)
+                                                    Number_of_the_file+=Add
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                                    Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17    
                                                 if  Circle_times2==T:
                                                            
                                                     if C==1 and T==0:
@@ -729,14 +729,16 @@ class compression:
                                         #print(Circle_times2)
                                         
                                         
-                                        lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)                      
-                                        if len(Times_11)!=0:
-                                           Add = int(Times_11, 2)
-                                        else:
-                                            Add=0
-                                        Number_of_the_file+=Add
-                                        Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
-                                        Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17 
+                                        lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17) 
+                                        if  Circle_times2==T:                      
+                                            if len(Times_11)!=0:
+                                               Add = int(Times_11, 2)
+                                            else:
+                                                Add=0
+                                            Number_of_the_file+=Add
+                                            #print(Number_of_the_file)
+                                            Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                            Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17 
                                         if  C==1 and len(sda)<6*8:
                                                     Number_zeroes=int(sda,2)
                                                     #print(Number_zeroes)
