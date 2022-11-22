@@ -375,7 +375,7 @@ class compression:
                                             divided=0
                                             Number_of_the_file1=int(sda,2)
                                             divided=Number_of_the_file1%3
-                                            divided2=format(divided,'02b') 
+                                            divided2=format(divided,'08b') 
                                                             
                                             if C==1:
                                                 
@@ -667,8 +667,8 @@ class compression:
                                                
                                               
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
-                                                divided=Equal_info_between_of_the_cirlce_of_the_file[0:2]
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[2:]
+                                                divided=Equal_info_between_of_the_cirlce_of_the_file[0:8]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 divided2=int(divided,2)
                                                 
                                                 
