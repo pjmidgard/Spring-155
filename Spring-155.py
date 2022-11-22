@@ -222,7 +222,7 @@ class compression:
                                     Extract1=0
                                     Times_10=1
                                     Times_7=0
-                                    Times_11=0
+                                    Times_11=-1
                                     Extra_byte="00000000"
                                     
                                     N_5=-1
@@ -237,7 +237,7 @@ class compression:
                                                     
                                             
                                                     
-                                            
+                                            Times_11+=1
                                             circuit.rx(N_5,0)
                                             N_5+=1                                   
                                            
@@ -262,7 +262,7 @@ class compression:
                                               
                                                 Times_7=Times_7//65535
                                                 
-                                                Times_11+=1
+                                                
                                                 
                                          
                                                                                                 
@@ -271,7 +271,7 @@ class compression:
                                                 
                                                 circuit.rx(Times_7,0)
                                                   
-                                               
+                                                Times_11=0
                                                
                                                 Times15+=1
                                                 
@@ -370,9 +370,15 @@ class compression:
                                           
     
                                             C=1
-                                         
+                                            Add= int(Times_11, 2)
+                                            
+                                            divided=0
+                                            Number_of_the_file1=int(sda,2)
+                                            divided=Number_of_the_file1%3
+                                            divided2=format(divided,'02b') 
+                                                            
                                             if C==1:
-                                                Add= int(Add_N, 2)
+                                                
                                                 if   Circle_times2==0:
     
                                                          
@@ -406,7 +412,7 @@ class compression:
                                                 if   Circle_times2>0:
                                                         Translate_info_Decimal_2=0
                                                 
-                                                        
+                                                          
             
                                                 if C==1 and T!=0:
                                                         Equal_info_between_of_the_cirlce_of_the_file4=Equal_info_between_of_the_cirlce_of_the_file4
@@ -427,8 +433,12 @@ class compression:
                                                                         
                                                         Hole_Number_information=(2**Deep5)-1
                                                         add_ones_together=Hole_Number_information
-                                                
-                                                        Number_of_the_file=Number_of_the_file*add_ones_together
+                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)//3)+Add                                                        
+                                                        
+                                                        
+                                                        
+
+
                                                           #print(Times_7)
                                                         
                                                
@@ -505,17 +515,18 @@ class compression:
                                                 #print(Equal_info_between_of_the_cirlce_of_the_file_17)
           
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and int(Info,2)!=0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info
+                                                  
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divide2+Info
                                                    
       
                                                     Extract1=1
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0 and int(Info,2)==0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divide2+Info
                                                    
       
                                                     Extract1=1
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
-                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+sda
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Extra_byte+Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+divide2+Info
                                                     Extract1=1
                                                 if Nuber_zero_or_else==0 and long_of_file<(2**40):
                                                        
@@ -656,6 +667,9 @@ class compression:
                                                
                                               
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
+                                                divided=Equal_info_between_of_the_cirlce_of_the_file[0:2]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[2:]
+                                                divided2=int(divided,2)
                                                 
                                                 
                                                                                                
@@ -690,7 +704,9 @@ class compression:
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=Number_of_the_file*add_ones_together
+                                                Number_of_the_file=((Number_of_the_file*add_ones_together)//3)+Add
+                                                if Circle_times2==1:
+                                                  Number_of_the_file+=divided2
                                                 
                                                
                                                                                               
