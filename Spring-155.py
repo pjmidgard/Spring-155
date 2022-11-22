@@ -633,6 +633,8 @@ class compression:
 
                                                 if len(sda)>5*8:
                                                     Deep5 = int(sda10, 2)
+                                                else:
+                                                    Add=0
                                                 Deep5=Deep5+2
                                                 Deep4=Deep5-1
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
@@ -727,6 +729,8 @@ class compression:
                                         lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)                      
                                         if len(Times_11)!=0:
                                            Add = int(Times_11, 2)
+                                        else:
+                                            Add=0
                                         Number_of_the_file+=Add
                                         
                                         if  C==1 and len(sda)<6*8:
