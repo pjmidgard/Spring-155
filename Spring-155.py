@@ -227,11 +227,11 @@ class compression:
                                                 #circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
-                                            if Times_11==(2**24)-1:
+                                            if Times_11==(2**8)-1:
                                                 
                                                 #circuit.rx(Times_7,0)
+                                                
                                                 Times_7+=1
-                                               
                                                 Times_11=0
                                              
                                             
@@ -267,8 +267,8 @@ class compression:
                                             
                                             
                                             B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
-                                            #if B>A:
-                                                #Times_10=0
+                                            if B>A:
+                                                Times_10=0
                                             
                                             #print(B)
                                                
@@ -362,8 +362,9 @@ class compression:
                                                 
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
+                                                Number_of_the_file=((Number_of_the_file*Number_of_the_file)*Deep5)+Add)
                                                 
-                                                Number_of_the_file=((Number_of_the_file*Number_of_the_file)+Add)*Deep5
+                                                
                                                                                   
                                                 #print(Number_of_the_file)
                                                         
@@ -424,8 +425,21 @@ class compression:
                                                                     while z<count_bits:
                                                                         add_bits="0"+add_bits
                                                                         z=z+1
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
-                                                                             
+                                               
+
+                                                Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                                lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                add_bits=""
+                                                count_bits=8-lenf%8
+                                                z=0
+                                                if count_bits!=0:
+                                                   if count_bits!=8:
+                                                           
+                                                      while z<count_bits:
+                                                         add_bits="0"+add_bits
+                                                         z=z+1
+                                                Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                                #print(Equal_info_between_of_the_cirlce_of_the_file_17)                          
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info
       
@@ -531,12 +545,11 @@ class compression:
     
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
-                                                lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)                                                        
-                                            
-
-                                                        
-                                                        
-                                                
+                                                lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
+                                                Hole_Number_information=(2**Deep5)
+                                                add_ones_together=Hole_Number_information
+                                                Number_of_the_file=(((Number_of_the_file*Number_of_the_file)*Deep5)+Add)
+                                                                                                
                                                 
                                                 
                                                 
@@ -558,10 +571,11 @@ class compression:
 
                                                       
                                                 
-                                                Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information
                                                 
-                                                Number_of_the_file=((Number_of_the_file*Number_of_the_file)+Add)*Deep5
+                                                
+
+                                                                                                
+                                                
                                                 #print(Number_of_the_file)
                                                                                               
                                        
