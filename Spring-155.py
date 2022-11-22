@@ -261,7 +261,7 @@ class compression:
                                                 
                                                 Times_10=1
                                               
-                                                #Times_7=Times_7//65535
+                                                Times_7=Times_7//65535
                                                 
                                                 
                                                 
