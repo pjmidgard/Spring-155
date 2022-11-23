@@ -194,9 +194,9 @@ class compression:
                                 
                                 
                                 if i==1:
-                                    #from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    #y = ParameterVector("x", 4000)
-                                    #circuit = QuantumCircuit(4000) 
+                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    y = ParameterVector("x", 4000)
+                                    circuit = QuantumCircuit(4000) 
                                     
                                     Extract1=0
                                     Times_10=1
@@ -214,24 +214,26 @@ class compression:
                                             
                                             
                                           
-                                            #circuit.rx(N_5,0)
+                                            circuit.rx(N_5,0)
                                             N_5+=1 
-                                            Times_11+=1                                  
+                                            Times_11+=1
+                                                                              
                                            
                                             if N_5==(2**16)-1:
-                                                #circuit.rx(Times_10,0)
+                                                circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
+                                                Times_7+=1 
                                                 N_5=0
                                             if Times_10==(2**16)-1:
-                                                #circuit.rx(Times_11,0)  
+                                                circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
                                             if Times_11==(2**8)-1:
                                                 
-                                                #circuit.rx(Times_7,0)
+                                                circuit.rx(Times_7,0)
                                                 
-                                                Times_7+=1
+                                               
                                                 Times_11=0
                                              
                                             
@@ -258,7 +260,7 @@ class compression:
                                            
                                             Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'016b')
                                             Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')
-                                            Add_N=format(Times_11,'024b')
+                                            Add_N=format(Times_11,'08b')
                                             Equal_info_between_of_the_cirlce_of_the_file4=format(Times_8,Combinate)
                                            
                                              
@@ -321,13 +323,13 @@ class compression:
     
                                                         sda10=Equal_info_between_of_the_cirlce_of_the_file2[0:16]
                                                         Deep5 = int(sda10, 2)
-                                                        Deep5=Deep5+2
-                                                        Deep4=Deep5-1
+                                                       
+                                                      
                                                         
                                                         lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
                                                         Equal_info_between_of_the_cirlce_of_the_file4=Equal_info_between_of_the_cirlce_of_the_file_2
                                                         
-                                                        Deep7=Deep5-2
+                                                      
                                                         
                                                         Times_6=Equal_info_between_of_the_cirlce_of_the_file3[0:16]
                                                         Add_N=Add_N
@@ -360,9 +362,8 @@ class compression:
                                                 
                                                 
                                                 
-                                                Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information
-                                                Number_of_the_file=((Number_of_the_file*Number_of_the_file)*Deep5)+Add)
+                                                
+                                                Number_of_the_file=(Number_of_the_file+Number_of_the_file+Add-Deep5)//2
                                                 
                                                 
                                                                                   
@@ -519,24 +520,24 @@ class compression:
 
                                                 
                                                 Deep5 = int(sda10, 2)
-                                                Deep5=Deep5+2
-                                                Deep4=Deep5-1
+                                               
+                                               
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Deep7=Deep5-2
+                                               
                                                 
                                                 Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 T = int(Times_6, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:24]
+                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:8]
                                                 Add = int(Times_11, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 
                                                 
                                                                                                
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                print("Deep: ")
-                                                print(Deep7-25)
+                                                
+                                                
                                                 
                                         if   Circle_times2>0:
                                         	Translate_info_Decimal_2=0
@@ -546,9 +547,8 @@ class compression:
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                Hole_Number_information=(2**Deep5)
-                                                add_ones_together=Hole_Number_information
-                                                Number_of_the_file=(((Number_of_the_file*Number_of_the_file)*Deep5)+Add)
+                                                
+                                                Number_of_the_file=(Number_of_the_file+Number_of_the_file+Add-Deep5)//2
                                                                                                 
                                                 
                                                 
