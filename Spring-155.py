@@ -219,17 +219,17 @@ class compression:
                                             Times_11+=1
                                                                               
                                            
-                                            if N_5==(2**16)-1:
+                                            if N_5==(2**8)-1:
                                                 circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 Times_7+=1 
                                                 N_5=0
-                                            if Times_10==(2**16)-1:
+                                            if Times_10==(2**8)-1:
                                                 circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
-                                            if Times_11==(2**8)-1:
+                                            if Times_11==(2**64)-1:
                                                 
                                                 circuit.rx(Times_7,0)
                                                 
@@ -258,9 +258,9 @@ class compression:
                                             Add_N=""
     
                                            
-                                            Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'016b')
-                                            Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')
-                                            Add_N=format(Times_11,'08b')
+                                            Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'08b')
+                                            Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'08b')
+                                            Add_N=format(Times_11,'064b')
                                             Equal_info_between_of_the_cirlce_of_the_file4=format(Times_8,Combinate)
                                            
                                              
@@ -276,7 +276,7 @@ class compression:
                                                
                                            
                                             
-                                            Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')                                            
+                                            Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'064b')                                            
                                             
                                                                                    
                                             
@@ -321,7 +321,7 @@ class compression:
                                                         
                                                         lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
     
-                                                        sda10=Equal_info_between_of_the_cirlce_of_the_file2[0:16]
+                                                        sda10=Equal_info_between_of_the_cirlce_of_the_file2[0:8]
                                                         Deep5 = int(sda10, 2)
                                                        
                                                       
@@ -331,7 +331,7 @@ class compression:
                                                         
                                                       
                                                         
-                                                        Times_6=Equal_info_between_of_the_cirlce_of_the_file3[0:16]
+                                                        Times_6=Equal_info_between_of_the_cirlce_of_the_file3[0:8]
                                                         Add_N=Add_N
                                                         
                                                         T = int(Times_6, 2)
@@ -516,23 +516,23 @@ class compression:
                                         if   Circle_times2==0:
                                 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                sda10=Equal_info_between_of_the_cirlce_of_the_file[0:16]
+                                                sda10=Equal_info_between_of_the_cirlce_of_the_file[0:8]
                                                 #print(Equal_info_between_of_the_cirlce_of_the_file)
 
                                                 
                                                 Deep5 = int(sda10, 2)
                                                
                                                
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                
                                                 
-                                                Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:16]
+                                                Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:8]
                                                 T = int(Times_6, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:16]
-                                                Add = int(Times_11, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
+                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:64]
+                                                Add = int(Times_11, 2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[64:]
                                                 
                                                 
                                                                                                
