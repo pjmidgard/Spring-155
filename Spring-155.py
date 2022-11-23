@@ -362,8 +362,9 @@ class compression:
                                           
 
 
-                                                                                             
-                                                Number_of_the_file=((2**Deep5)+(2**Number_of_the_file))+Add
+                                                Hole_Number_information=(2**Deep5)-1
+                                                add_ones_together=Hole_Number_information                                                
+                                                Number_of_the_file=((2**Number_of_the_file)+(2**add_ones_together))+Add
                                                 
                                                 
                                                                                   
@@ -548,7 +549,9 @@ class compression:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 
-                                                Number_of_the_file=((2**Deep5)+(2**Number_of_the_file))+Add
+                                                Hole_Number_information=(2**Deep5)-1
+                                                add_ones_together=Hole_Number_information      
+                                                Number_of_the_file=((2**Number_of_the_file)+(2**add_ones_together))+Add
                                                                                                 
                                                 
                                                 
