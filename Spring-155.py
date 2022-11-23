@@ -229,7 +229,7 @@ class compression:
                                                 circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
-                                            if Times_11==(2**64)-1:
+                                            if Times_11==(2**16)-1:
                                                 
                                                 circuit.rx(Times_7,0)
                                                 
@@ -260,7 +260,7 @@ class compression:
                                            
                                             Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'016b')
                                             Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')
-                                            Add_N=format(Times_11,'064b')
+                                            Add_N=format(Times_11,'016b')
                                             Equal_info_between_of_the_cirlce_of_the_file4=format(Times_8,Combinate)
                                            
                                              
@@ -276,7 +276,7 @@ class compression:
                                                
                                            
                                             
-                                            Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'064b')                                            
+                                            Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')                                            
                                             
                                                                                    
                                             
@@ -362,9 +362,8 @@ class compression:
                                           
 
 
-                                                Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information                                                
-                                                Number_of_the_file=((2**Number_of_the_file)+(2**add_ones_together))+Add
+                                                                                             
+                                                Number_of_the_file=((2**Deep5)+(2**Number_of_the_file))+Add
                                                 
                                                 
                                                                                   
@@ -530,9 +529,9 @@ class compression:
                                                 Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 T = int(Times_6, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:64]
+                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 Add = int(Times_11, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[64:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 
                                                 
                                                                                                
@@ -549,9 +548,7 @@ class compression:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                 
-                                                Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information      
-                                                Number_of_the_file=((2**Number_of_the_file)+(2**add_ones_together))+Add
+                                                Number_of_the_file=((2**Deep5)+(2**Number_of_the_file))+Add
                                                                                                 
                                                 
                                                 
