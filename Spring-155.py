@@ -518,14 +518,14 @@ class compression:
                                         if   Circle_times2==0:
                                 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                sda10=Equal_info_between_of_the_cirlce_of_the_file[0:48]
+                                                sda10=Equal_info_between_of_the_cirlce_of_the_file[0:24]
                                                 #print(Equal_info_between_of_the_cirlce_of_the_file)
 
                                                 
                                                 Deep5 = int(sda10, 2)
                                                
                                                
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
                                                
                                                 
@@ -535,8 +535,8 @@ class compression:
                                                 Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:8]
                                                 Add = int(Times_11, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
-                                                long=int(Equal_info_between_of_the_cirlce_of_the_file[0:24],2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
+                                                long=int(Equal_info_between_of_the_cirlce_of_the_file[0:48],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
                                                 
                                                 
                                                                                                
