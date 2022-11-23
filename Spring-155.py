@@ -219,13 +219,13 @@ class compression:
                                             Times_11+=1
                                                                               
                                            
-                                            if N_5==(2**4)-1:
+                                            if N_5==(2**48)-1:
                                                 circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                                 Times_7+=1 
                                                 N_5=0
-                                            if Times_10==(2**4)-1:
+                                            if Times_10==(2**48)-1:
                                                 circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
