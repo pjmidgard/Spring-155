@@ -229,7 +229,7 @@ class compression:
                                                 circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
-                                            if Times_11==(2**8)-1:
+                                            if Times_11==(2**32)-1:
                                                 
                                                 circuit.rx(Times_7,0)
                                                 
@@ -260,7 +260,7 @@ class compression:
                                            
                                             Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'024b')
                                             Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'024b')
-                                            Add_N=format(Times_11,'08b')
+                                            Add_N=format(Times_11,'032b')
                                             Equal_info_between_of_the_cirlce_of_the_file4=format(Times_8,Combinate)
                                            
                                              
@@ -532,9 +532,9 @@ class compression:
                                                 Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:24]
                                                 T = int(Times_6, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
-                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:8]
+                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:32]
                                                 Add = int(Times_11, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[32:]
                                                 long=int(Equal_info_between_of_the_cirlce_of_the_file[0:48],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
                                                 
