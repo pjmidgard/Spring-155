@@ -269,8 +269,8 @@ class compression:
                                             
                                             
                                             B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
-                                            #if B>A:
-                                                #Times_10=0
+                                            if B>A:
+                                                Times_10=0
                                             
                                             #print(B)
                                                
@@ -565,7 +565,7 @@ class compression:
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information      
                                                 Number_of_the_file=(Number_of_the_file+add_ones_together)+Add
-                                                                                                
+                                                #print(Number_of_the_file)                                             
                                                 
                                                 
                                                 
