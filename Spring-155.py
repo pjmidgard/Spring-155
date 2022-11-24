@@ -552,7 +552,16 @@ class compression:
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                
+
+
+                                                if len (Equal_info_between_of_the_cirlce_of_the_file)!=0:
+                        
+                                                                                                    
+                                                    Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file,2)
+
+                                                else:
+                                                     Number_of_the_file=0
+                                                     
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information      
                                                 Number_of_the_file=(Number_of_the_file+add_ones_together)+Add
@@ -564,13 +573,7 @@ class compression:
                                                 
 
                                                    
-                                                if len (Equal_info_between_of_the_cirlce_of_the_file)!=0:
-                        
-                                                                                                    
-                                                    Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file,2)
-
-                                                else:
-                                                     Number_of_the_file=0
+                                                
    
                                              
 
