@@ -624,6 +624,19 @@ class compression:
                                             	            	add_bits="0"+add_bits
                                             	            	z=z+1
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+
+
+                                            	
+                                            	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                            	add_bits=""
+                                            	count_bits=8-lenf%8
+                                            	z=0
+                                            	if count_bits!=0:
+                                            	        if count_bits!=8:
+                                            	            while z<count_bits:
+                                            	            	add_bits="0"+add_bits
+                                            	            	z=z+1
+                                            	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                      
                                             if C==1 and T!=0:
  
@@ -635,6 +648,18 @@ class compression:
                                             	z=0
                                             	if count_bits!=0:
                                             	        if count_bits!=long:
+                                            	            while z<count_bits:
+                                            	            	add_bits="0"+add_bits
+                                            	            	z=z+1
+                                            	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+
+                                            	
+                                            	lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                            	add_bits=""
+                                            	count_bits=8-lenf%8
+                                            	z=0
+                                            	if count_bits!=0:
+                                            	        if count_bits!=8:
                                             	            while z<count_bits:
                                             	            	add_bits="0"+add_bits
                                             	            	z=z+1
