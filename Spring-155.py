@@ -365,7 +365,7 @@ class compression:
                                                 
                                                 if  Circle_times2!=T:
                                                                                           
-                                                        Number_of_the_file=Number_of_the_file*add_ones_together
+                                                        Number_of_the_file=Number_of_the_file+add_ones_together
                                                         
                                                 if  Circle_times2==T:
                                                         Number_of_the_file+=Add
@@ -582,7 +582,7 @@ class compression:
                                                 
                                                 if  Circle_times2!=T:
                                                                                           
-                                                        Number_of_the_file=Number_of_the_file*add_ones_together
+                                                        Number_of_the_file=Number_of_the_file+add_ones_together
                                                         
                                                 if  Circle_times2==T:
                                                         Number_of_the_file+=Add
