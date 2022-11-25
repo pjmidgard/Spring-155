@@ -260,7 +260,12 @@ class compression:
                                            
                                             Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'016b')
                                             Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'016b')
+                                            
+                                            
+
                                             Add_N=format(Times_11,'032b')
+
+                                            
                                             Equal_info_between_of_the_cirlce_of_the_file4=format(Times_8,Combinate)
                                            
                                              
@@ -453,16 +458,32 @@ class compression:
                                                         long1=len(long3)
                                                         long2=format(long1,'08b')
 
-                                                
+                                                        Add_N=bin(Times_11)[2:]
+                                            
+
+                                                        lenf=len(Add_N)
+                                                        add_bits=""
+                                                        count_bits=8-lenf%8
+                                                        z=0
+                                                        if count_bits!=0:
+                                                           if count_bits!=8:
+                                                                   
+                                                                while z<count_bits:
+                                                                    add_bits="0"+add_bits
+                                                                    z=z+1
+                                                        Add_N1=add_bits+Add_N
+
+                                                        Add_N1_long2=len(Add_N1)
+                                                        Add_N1_long1=format(Add_N1_long2,'08b')
                                                                       
                                                         if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
 
                                                      
-                                                             Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long2+long3+Info
+                                                             Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N1_long1+Add_N1+long2+long3+Info
                                                              Extract1=1
 
                                                         if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
-                                                            Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long2+long3+sda
+                                                            Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N1_long1+Add_N1+long2+long3+sda
                                                             Extract1=1
                                                     
                                                         
@@ -544,9 +565,14 @@ class compression:
                                                 Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:16]
                                                 T = int(Times_6, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
-                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:32]
+
+                                                T_long=Equal_info_between_of_the_cirlce_of_the_file[0:8]
+                                                T_long1 = int(T_long, 2)
+
+                                                
+                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:T_long1]
                                                 Add = int(Times_11, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[32:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[T_long1:]
                                                 
                                                 long1=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
