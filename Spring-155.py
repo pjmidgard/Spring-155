@@ -360,12 +360,15 @@ class compression:
                                                 else:
                                                     Number_of_the_file=0
                                           
-
-
                                                 Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information                                                
-                                                Number_of_the_file=(Number_of_the_file+add_ones_together)+Add
+                                                add_ones_together=Hole_Number_information
                                                 
+                                                if  Circle_times2!=T:
+                                                                                          
+                                                        Number_of_the_file=Number_of_the_file+add_ones_together
+                                                        
+                                                if  Circle_times2==T:
+                                                        Number_of_the_file+=Add
                                                 
                                                                                   
                                                 #print(Number_of_the_file)
@@ -575,34 +578,15 @@ class compression:
                                                      Number_of_the_file=0
                                                      
                                                 Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information      
-                                                Number_of_the_file=(Number_of_the_file+add_ones_together)+Add
-                                                #print(Number_of_the_file)                                             
+                                                add_ones_together=Hole_Number_information
                                                 
-                                                
-                                                
-                                               
-                                                
-
-                                                   
-                                                
-   
+                                                if  Circle_times2!=T:
+                                                                                          
+                                                        Number_of_the_file=Number_of_the_file+add_ones_together
+                                                        
+                                                if  Circle_times2==T:
+                                                        Number_of_the_file+=Add
                                              
-
-
-
-                                                      
-                                                
-                                                
-                                                
-
-                                                                                                
-                                                
-                                                #print(Number_of_the_file)
-                                                                                              
-                                       
-                                    
-                                      
                                     #####################################################################################################################################################
                                    
                                     
