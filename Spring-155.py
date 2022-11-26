@@ -273,9 +273,9 @@ class compression:
                                             Info=Equal_info_between_of_the_cirlce_of_the_file4
                                             
                                             
-                                            B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
-                                            if B>A:
-                                                Times_10=0
+                                            #B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
+                                            #if B>A:
+                                                #Times_10=0
                                             
                                             #print(B)
                                                
@@ -344,9 +344,10 @@ class compression:
                                                         lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
                                                         #print("Deep: ")
                                                         #print(Deep7-25)
-                                                        
+                                                        Times_half_Real=0
                                                 if   Circle_times2>0:
                                                         Translate_info_Decimal_2=0
+                                                        
                                                 
                                                         
             
@@ -368,12 +369,13 @@ class compression:
                                                 Hole_Number_information=(2**Deep5)-1
                                                 add_ones_together=Hole_Number_information
                                                 
-                                                if  Circle_times2!=T:
+                                                
                                                                                           
-                                                        Number_of_the_file=Number_of_the_file+add_ones_together
+                                                Number_of_the_file=(Number_of_the_file+add_ones_together)+Add
+                                                Times_half_Real+=1
                                                         
-                                                if  Circle_times2==T:
-                                                        Number_of_the_file+=Add
+                                                
+                                        
                                                 
                                                                                   
                                                 #print(Number_of_the_file)
@@ -405,6 +407,8 @@ class compression:
                                                 
                                                 
                                                 if  Circle_times2==T:
+                                                        Circle_times2=0
+                                                        
                                                            
                                                         if C==1 and T==0:
                                                                 Equal_info_between_of_the_cirlce_of_the_file_17=sda
@@ -437,54 +441,54 @@ class compression:
                                                                                 z=z+1
                                                        
 
-                                                
+                                                                Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                                          #print(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                        
-                                                        long=bin(lenf2)[2:]
+
+                                                lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                add_bits=""
+                                                count_bits=8-lenf%8
+                                                z=0
+                                                if count_bits!=0:
+                                                        if count_bits!=8:
+                                                                while z<count_bits:
+                                                                        add_bits="0"+add_bits
+                                                                        z=z+1
+                                                Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17        
+                                                
 
 
-                                                        lenf=len(long)
-                                                        add_bits=""
-                                                        count_bits=8-lenf%8
-                                                        z=0
-                                                        if count_bits!=0:
-                                                           if count_bits!=8:
-                                                                   
-                                                              while z<count_bits:
-                                                                 add_bits="0"+add_bits
-                                                                 z=z+1
-                                                        long3=add_bits+long
-         
-                                                        long1=len(long3)
-                                                        long2=format(long1,'08b')
+                                                
 
-                                                        Add_N=bin(Times_11)[2:]
+                                                long=format(lenf2,'048b')
+
+                                                Add_N=format(Times_11,'032b')
                                             
 
-                                                        lenf=len(Add_N)
-                                                        add_bits=""
-                                                        count_bits=8-lenf%8
-                                                        z=0
-                                                        if count_bits!=0:
-                                                           if count_bits!=8:
-                                                                   
-                                                                while z<count_bits:
-                                                                    add_bits="0"+add_bits
-                                                                    z=z+1
-                                                        Add_N1=add_bits+Add_N
 
-                                                        Add_N1_long2=len(Add_N1)
-                                                        Add_N1_long1=format(Add_N1_long2,'08b')
-                                                                      
-                                                        if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
+                                                Time_Real=format(T,'024b')
+
+                                                Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'024b')
+                                                Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'024b')
+                                            
+                                            
+
+                                                Add_N=format(Times_11,'032b')
+                                                Reality=format(Times_half_Real,'024b')
+                                                #print(T)
+                                                
+                                                
+
+                                                
+                                                              
+                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
 
                                                      
-                                                             Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N1_long1+Add_N1+long2+long3+Info
-                                                             Extract1=1
+                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long+Time_Real+Reality+Info
+                                                        Extract1=1
 
-                                                        if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
-                                                            Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N1_long1+Add_N1+long2+long3+sda
-                                                            Extract1=1
+                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
+                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long+Time_Real+Reality+sda
+                                                        Extract1=1
                                                     
                                                         
                                     if Extract1==1:                
@@ -566,33 +570,49 @@ class compression:
                                                 T = int(Times_6, 2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
 
-                                                T_long=Equal_info_between_of_the_cirlce_of_the_file[0:8]
-                                                T_long1 = int(T_long, 2)
+                                                
+
+
+
+                                        
 
                                                 
-                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:T_long1]
+                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:32]
                                                 Add = int(Times_11, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[T_long1:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[32:]
                                                 
-                                                long1=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
                                                 
-                                                long=int(Equal_info_between_of_the_cirlce_of_the_file[0:long1],2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[long1:]
+                                                
+                                                long=int(Equal_info_between_of_the_cirlce_of_the_file[0:48],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
+                                                #print(long)
+
+
+                                                Real=Equal_info_between_of_the_cirlce_of_the_file[0:24]
+                                                T_Real = int(Real, 2)
+                                                #print(T_Real)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
+
+                                                Real1=Equal_info_between_of_the_cirlce_of_the_file[0:24]
+                                                Reality = int(Real1, 2)
+                                                #print(T_Real)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
                                                 
                                                                                                
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                
-                                                
+                                                Reality=0
+                                                Reality2=0
                                                 
                                         if   Circle_times2>0:
                                         	Translate_info_Decimal_2=0
+                                        	
                                         
                                         	
     
                                         if C==1 and T!=0:
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
+                                                
 
 
                                                 if len (Equal_info_between_of_the_cirlce_of_the_file)!=0:
@@ -603,15 +623,15 @@ class compression:
                                                 else:
                                                      Number_of_the_file=0
                                                      
-                                                Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information
+                                                if Reality2<=Reality:
+                                                        Hole_Number_information=(2**Deep5)-1
+                                                        add_ones_together=Hole_Number_information
+                                                        Reality2+=1
                                                 
-                                                if  Circle_times2!=T:
+                                                
                                                                                           
-                                                        Number_of_the_file=Number_of_the_file+add_ones_together
-                                                        
-                                                if  Circle_times2==T:
-                                                        Number_of_the_file+=Add
+                                                        Number_of_the_file=(Number_of_the_file+add_ones_together)+Add
+                                                #print(Number_of_the_file)
                                              
                                     #####################################################################################################################################################
                                    
@@ -635,7 +655,7 @@ class compression:
                                         #print(Circle_times2)
                                         
                                         
-                                        if  Circle_times2==T:
+                                        if  Circle_times2==T_Real:
                                         	   
                                             if C==1 and T==0:
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file
