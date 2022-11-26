@@ -371,7 +371,7 @@ class compression:
                                                 
                                                 
                                                                                           
-                                                Number_of_the_file=(Number_of_the_file+add_ones_together)+Add
+                                                Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
                                                 Times_half_Real+=1
                                                         
                                                 
@@ -630,7 +630,7 @@ class compression:
                                                 
                                                 
                                                                                           
-                                                        Number_of_the_file=(Number_of_the_file+add_ones_together)+Add
+                                                        Number_of_the_file=(Number_of_the_file*add_ones_together)+Add
                                                 #print(Number_of_the_file)
                                              
                                     #####################################################################################################################################################
