@@ -108,6 +108,9 @@ class compression:
 
                        # Read the whole file at once
                         data = binary_file.read()
+                        if i==2:
+                            import paq
+                            data= paq.decompress(data)
       
                         s=str(data)
 
@@ -465,7 +468,7 @@ class compression:
                                             
 
 
-                                                Time_Real=format(T,'024b')
+                                                Time_Real=format(T,'065536b')
 
                                                 Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'024b')
                                                 Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'024b')
@@ -473,7 +476,7 @@ class compression:
                                             
 
                                                 Add_N=format(Times_11,'032b')
-                                                Reality=format(Times_half_Real,'024b')
+                                                Reality=format(Times_half_Real,'065536b')
                                                 #print(T)
                                                 
                                                 
@@ -503,6 +506,8 @@ class compression:
                                             add_bitszzza=""
                                             add_bitszs=""
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Times_6
+                                             import paq
+                                             width_bits3= paq.compress(width_bits3)
                                                             
                                             with open(nameas, "wb") as f2:
                                                 f2.write(width_bits3)
@@ -588,15 +593,15 @@ class compression:
                                                 #print(long)
 
 
-                                                Real=Equal_info_between_of_the_cirlce_of_the_file[0:24]
+                                                Real=Equal_info_between_of_the_cirlce_of_the_file[0:65536]
                                                 T_Real = int(Real, 2)
                                                 #print(T_Real)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[65536:]
 
-                                                Real1=Equal_info_between_of_the_cirlce_of_the_file[0:24]
+                                                Real1=Equal_info_between_of_the_cirlce_of_the_file[0:65536]
                                                 Reality = int(Real1, 2)
                                                 #print(T_Real)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[65536:]
                                                 
                                                                                                
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
