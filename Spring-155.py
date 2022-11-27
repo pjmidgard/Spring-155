@@ -108,9 +108,9 @@ class compression:
 
                        # Read the whole file at once
                         data = binary_file.read()
-                        if i==2:
-                            import paq
-                            data= paq.decompress(data)
+                        #if i==2:
+                            #import paq
+                            #data= paq.decompress(data)
       
                         s=str(data)
 
@@ -462,13 +462,24 @@ class compression:
 
                                                 
 
-                                                long=format(lenf2,'048b')
+                                                long3=format(lenf2,'048b')
 
                                                 Add_N=format(Times_11,'032b')
                                             
 
-
-                                                Time_Real=format(T,'065536b')
+            
+                                                Time_Real=bin(T)[2:]
+                                                T1=len(Time_Real)
+                                                T2=(T1//8)+1
+                                                T2=T2*8
+                                                
+                                                C="0"+str(T2)+"b"
+                                                Time_Real3=format(T,C)
+                                                T1=len(Time_Real3)
+                                                Time_Real1=format(T1,'016b')
+                                                Time_Real2=Time_Real1+Time_Real3
+                                                
+                                                
 
                                                 Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'024b')
                                                 Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'024b')
@@ -476,7 +487,17 @@ class compression:
                                             
 
                                                 Add_N=format(Times_11,'032b')
-                                                Reality=format(Times_half_Real,'065536b')
+                                               
+                                                Time_Real=bin(Times_half_Real)[2:]
+                                                T1=len(Time_Real)
+                                                T2=(T1//8)+1
+                                                T2=T2*8
+                                                
+                                                C="0"+str(T2)+"b"
+                                                Time_Real3=format(Times_half_Real,C)
+                                                T1=len(Time_Real3)
+                                                Time_Real1=format(T1,'016b')
+                                                Reality=Time_Real1+Time_Real3
                                                 #print(T)
                                                 
                                                 
@@ -486,11 +507,11 @@ class compression:
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
 
                                                      
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long+Time_Real+Reality+Info
+                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Info
                                                         Extract1=1
 
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long+Time_Real+Reality+sda
+                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+sda
                                                         Extract1=1
                                                     
                                                         
@@ -506,8 +527,8 @@ class compression:
                                             add_bitszzza=""
                                             add_bitszs=""
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Times_6
-                                            import paq
-                                            width_bits3= paq.compress(width_bits3)
+                                            #import paq
+                                            #width_bits3= paq.compress(width_bits3)
                                                             
                                             with open(nameas, "wb") as f2:
                                                 f2.write(width_bits3)
@@ -590,21 +611,31 @@ class compression:
                                                 
                                                 long=int(Equal_info_between_of_the_cirlce_of_the_file[0:48],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
-                                                #print(long)
+                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
+                                                #print(Real_C)
 
-
-                                                Real=Equal_info_between_of_the_cirlce_of_the_file[0:65536]
-                                                T_Real = int(Real, 2)
-                                                #print(T_Real)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[65536:]
-
-                                                Real1=Equal_info_between_of_the_cirlce_of_the_file[0:65536]
-                                                Reality = int(Real1, 2)
-                                                #print(T_Real)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[65536:]
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
+                                                T_Real=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
                                                 
-                                                                                               
+
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
+
+                                                
+
+
+                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
+                                                #print(Real_C)
+
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
+                                                Reality=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                
+
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
+                                                
+
+ 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
+
                                                 Reality=0
                                                 Reality2=0
                                                 
