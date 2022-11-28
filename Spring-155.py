@@ -197,9 +197,9 @@ class compression:
                                 
                                 
                                 if i==1:
-                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
-                                    y = ParameterVector("x", 4000)
-                                    circuit = QuantumCircuit(4000) 
+                                    #from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    #y = ParameterVector("x", 4000)
+                                    #circuit = QuantumCircuit(4000) 
                                     
                                     Extract1=0
                                     Times_10=1
@@ -217,24 +217,24 @@ class compression:
                                             
                                             
                                           
-                                            circuit.rx(N_5,0)
+                                            #circuit.rx(N_5,0)
                                             N_5+=1 
                                             Times_11+=1
                                                                               
                                            
                                             if N_5==(2**24)-1:
-                                                circuit.rx(Times_10,0)
+                                                #circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                          
                                                 N_5=0
                                             if Times_10==(2**24)-1:
-                                                circuit.rx(Times_11,0)  
+                                                #circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
                                             if Times_11==(2**32)-1:
                                                 
-                                                circuit.rx(Times_7,0)
+                                                #circuit.rx(Times_7,0)
                                                 Times_7+=1
                                                
                                                 Times_11=0
@@ -276,9 +276,9 @@ class compression:
                                             Info=Equal_info_between_of_the_cirlce_of_the_file4
                                             
                                             
-                                            B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
-                                            if B>A:
-                                                Times_10=0
+                                            #B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
+                                            #if B>A:
+                                                #Times_10=0
                                             
                                             #print(B)
                                                
@@ -462,9 +462,35 @@ class compression:
 
                                                 
 
-                                                long3=format(lenf2,'048b')
+                                                
 
-                                                Add_N=format(Times_11,'032b')
+
+                                                Time_Real=bin(lenf2)[2:]
+                                                T1=len(Time_Real)
+                                                T2=(T1//8)+1
+                                                T2=T2*8
+                                                
+                                                C="0"+str(T2)+"b"
+                                                Time_Real3=format(lenf2,C)
+                                                T1=len(Time_Real3)
+                                                Time_Real1=format(T1,'08b')
+                                                long3=Time_Real1+Time_Real3
+
+                                                
+
+
+                                                Time_Real=bin(Times_11)[2:]
+                                                T1=len(Time_Real)
+                                                T2=(T1//8)+1
+                                                T2=T2*8
+                                                
+                                                C="0"+str(T2)+"b"
+                                                Time_Real3=format(Times_11,C)
+                                                T1=len(Time_Real3)
+                                                Time_Real1=format(T1,'08b')
+                                                Add_N=Time_Real1+Time_Real3
+
+                                                
                                             
 
             
@@ -481,15 +507,41 @@ class compression:
                                                 
                                                 
 
-                                                Equal_info_between_of_the_cirlce_of_the_file2=format(N_5,'024b')
-                                                Equal_info_between_of_the_cirlce_of_the_file3=format(Times_10,'024b')
+                                                
+
+                                                Time_Real=bin(N_5)[2:]
+                                                T1=len(Time_Real)
+                                                T2=(T1//8)+1
+                                                T2=T2*8
+                                                
+                                                C="0"+str(T2)+"b"
+                                                Time_Real3=format(N_5,C)
+                                                T1=len(Time_Real3)
+                                                Time_Real1=format(T1,'08b')
+                                                Equal_info_between_of_the_cirlce_of_the_file2=Time_Real1+Time_Real3
+                                                
+
+
+                                                
+                                                
+
+                                                Time_Real=bin(Times_10)[2:]
+                                                T1=len(Time_Real)
+                                                T2=(T1//8)+1
+                                                T2=T2*8
+                                                
+                                                C="0"+str(T2)+"b"
+                                                Time_Real3=format(Times_10,C)
+                                                T1=len(Time_Real3)
+                                                Time_Real1=format(T1,'08b')
+                                                Equal_info_between_of_the_cirlce_of_the_file3=Time_Real1+Time_Real3
                                             
                                             
 
-                                                Add_N=format(Times_11,'032b')
+                                        
                                                
                                                 Time_Real=bin(Times_half_Real)[2:]
-                                                T1=len(Times_half_Real)
+                                                T1=len(Time_Real)
                                                 T2=(T1//8)+1
                                                 T2=T2*8
                                                 
@@ -581,59 +633,37 @@ class compression:
                                         if   Circle_times2==0:
                                 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                                sda10=Equal_info_between_of_the_cirlce_of_the_file[0:24]
-                                                #print(Equal_info_between_of_the_cirlce_of_the_file)
-
                                                 
-                                                Deep5 = int(sda10, 2)
+                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
+                                                Deep5=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                
-                                               
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
-                                                lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
-                                               
-                                                
-                                                Times_6=Equal_info_between_of_the_cirlce_of_the_file[0:24]
-                                                T = int(Times_6, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[24:]
+                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
+                                                T=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
 
+                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
+                                                Add=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 
-
-
-
-                                        
-
+                                                Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:8],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[8:]
+                                                long=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 
-                                                Times_11=Equal_info_between_of_the_cirlce_of_the_file[0:32]
-                                                Add = int(Times_11, 2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[32:]
-                                                
-                                                
-                                                
-                                                long=int(Equal_info_between_of_the_cirlce_of_the_file[0:48],2)
-                                                Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[48:]
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
-                                                #print(Real_C)
-
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 T_Real=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
-                                                
-
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
-
-                                                
-
 
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
-                                                #print(Real_C)
-
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Reality=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
-                                                
-
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 
-
- 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
 
                                                 Reality=0
