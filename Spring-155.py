@@ -489,7 +489,7 @@ class compression:
                                                 Add_N=format(Times_11,'032b')
                                                
                                                 Time_Real=bin(Times_half_Real)[2:]
-                                                T1=len(Time_Real)
+                                                T1=len(Times_half_Real)
                                                 T2=(T1//8)+1
                                                 T2=T2*8
                                                 
