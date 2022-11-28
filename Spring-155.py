@@ -595,6 +595,19 @@ class compression:
                                    
 
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
+                                    Corrupted=len(sda)
+                                    if Corrupted<15:
+                                            with open(nameas, "wb") as f2:
+                                            
+                                            
+                                                f2.write(width_bits3)
+
+                                            
+                                            x2 = time()
+                                            x3=x2-x
+                                            xs=float(x3)
+                                            return print(x3)
+                                                            
                                                             
                               
                                     Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file_2
