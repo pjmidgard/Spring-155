@@ -675,11 +675,12 @@ class compression:
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Reality=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
+                                                print(Reality)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
 
-                                                Reality=0
+                                        
                                                 Reality2=0
                                                 
                                         if   Circle_times2>0:
@@ -706,6 +707,7 @@ class compression:
                                                         Hole_Number_information=(2**Deep5)-1
                                                         add_ones_together=Hole_Number_information
                                                         Reality2+=1
+                                                        #print(Reality2)
                                                 
                                                 
                                                                                           
@@ -807,6 +809,8 @@ class compression:
                                             add_bitszzza=""
                                             add_bitszs=""
                                             Equal_info_between_of_the_cirlce_of_the_file_2=Times_6
+
+                                            #print(Reality2)
                                              
                                             with open(nameas, "wb") as f2:
                                             
