@@ -677,13 +677,13 @@ class compression:
                                                 Real_C=int(Equal_info_between_of_the_cirlce_of_the_file[0:16],2)
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[16:]
                                                 Reality=int(Equal_info_between_of_the_cirlce_of_the_file[:Real_C],2)
-                                                print(Reality)
+                                                #print(Reality)
                                               
                                                 Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file[Real_C:]
                                                 
                                                 lenf6=len(Equal_info_between_of_the_cirlce_of_the_file)
 
-                                                print(Reality)
+                                                #print(Reality)
                                                 Reality2=0
                                                 
                                         if   Circle_times2>0:
