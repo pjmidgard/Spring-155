@@ -360,29 +360,29 @@ class compression:
                                                        
                                                         
                                                        
-                                                if len (Equal_info_between_of_the_cirlce_of_the_file4)!=0:
+                                                        if len (Equal_info_between_of_the_cirlce_of_the_file4)!=0:
                         
                                                                                                     
-                                                    Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file4, 2)
+                                                            Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file4, 2)
                                                                                                      
 
-                                                else:
-                                                    Number_of_the_file=0
+                                                        else:
+                                                            Number_of_the_file=0
                                           
-                                                Hole_Number_information=(2**Deep5)-1
-                                                add_ones_together=Hole_Number_information
+                                                        Hole_Number_information=(2**Deep5)-1
+                                                        add_ones_together=Hole_Number_information
                                                 
                                                 
                                                                                           
-                                                Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
-                                                Times_half_Real+=1
+                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                        Times_half_Real+=1
                                                         
                                                 
                                         
                                                 
                                                                                   
-                                                #print(Number_of_the_file)
-                                                #print(Times_half_Real)
+                                                
+                                                
                                                         
                                                
 
