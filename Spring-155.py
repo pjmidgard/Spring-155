@@ -197,6 +197,16 @@ class compression:
                                 
                                 
                                 if i==1:
+                                    if  int(sda,2)==0:
+                                                    long_of_file=len(sda)
+                                                    
+                                                    Nuber_zero_or_else=int(sda,2)
+                                                    long_of_file+=1
+                                                    #print(long_of_file)
+                                                    if Nuber_zero_or_else==0 and long_of_file<(2**40):
+                                                                                                 long_of_file_N=format(long_of_file,'08b')
+                                                                                                 Compress_zeros=long_of_file_N
+                                                                                             
                                     from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
                                     y = ParameterVector("x", 4000)
                                     circuit = QuantumCircuit(4000) 
@@ -565,6 +575,8 @@ class compression:
 
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+sda
+                                                if int(sda,2)==0:
+                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros                                                       
                                                         Extract1=1
                                                     
                                                         
@@ -594,10 +606,23 @@ class compression:
                                     		
                                 if i==2:
                                    
-
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
+                                    lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                    if  len(sda)<6*8:
+                                                 
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17
+                                                    #print(Number_zeroes)
+                                                    Number_zeroes-=2
+                                                   
+                                                    Number_zeroes1=0
+                                                    while Number_zeroes!=Number_zeroes1:
+                                                            Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17+"0"
+                                                            Number_zeroes1+=1
+                                   
+
+                                    
                                     Corrupted=len(sda)
-                                    if Corrupted<15:
+                                    if Corrupted<15 and Corrupted>5: 
                                             with open(nameas, "wb") as f2:
                                             
                                             
@@ -735,6 +760,8 @@ class compression:
                                         #print(Circle_times2)
                                         
                                         
+                                          
+                                            
                                         if  Circle_times2==T_Real:
                                         	   
                                             if C==1 and T==0:
@@ -762,6 +789,8 @@ class compression:
                                             	            	add_bits="0"+add_bits
                                             	            	z=z+1
                                             	Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                            	
+                                            
                                      
                                             if C==1 and T!=0:
  
