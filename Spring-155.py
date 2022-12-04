@@ -232,13 +232,13 @@ class compression:
                                             Times_11+=1
                                                                               
                                            
-                                            if N_5==(2**24)-1:
+                                            if N_5==(2**4)-1:
                                                 circuit.rx(Times_10,0)
                                                 
                                                 Times_10+=1
                                          
                                                 N_5=0
-                                            if Times_10==(2**24)-1:
+                                            if Times_10==(2**4)-1:
                                                 circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
@@ -289,6 +289,7 @@ class compression:
                                             B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
                                             if B>A:
                                                 Times_10=0
+                                                
                                             
                                             #print(B)
                                                
@@ -386,6 +387,7 @@ class compression:
                                                                                           
                                                         Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
                                                         Times_half_Real+=1
+                                                        
                                                         
                                                 
                                         
@@ -575,6 +577,7 @@ class compression:
 
                                                 if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+sda
+                                                        Extract1=1  
                                                 if int(sda,2)==0:
                                                         Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros                                                       
                                                         Extract1=1
