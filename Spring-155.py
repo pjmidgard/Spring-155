@@ -616,12 +616,38 @@ class compression:
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17
                                                     #print(Number_zeroes)
                                                     Number_zeroes=int(sda,2)
-                                                    Number_zeroes-=2
+                                                    Number_zeroes-=1
+                                                    Equal_info_between_of_the_cirlce_of_the_file_18=""
                                                    
                                                     Number_zeroes1=0
                                                     while Number_zeroes!=Number_zeroes1:
-                                                            Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17+"0"
+                                                            Equal_info_between_of_the_cirlce_of_the_file_18=Equal_info_between_of_the_cirlce_of_the_file_18+"0"
                                                             Number_zeroes1+=1
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_18
+
+                                                    L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                         
+                                                    n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
+                                                    width_bits=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                    width_bits=(width_bits//8)*2
+                                                    width_bits=str(width_bits)
+                                                    width_bits="%0"+width_bits+"x"
+                                                    width_bits3=binascii.unhexlify(width_bits % n)
+                                                    width_bits2=len(width_bits3)
+
+                                                    add_bitszzza=""
+                                                    add_bitszs=""
+                                                    Equal_info_between_of_the_cirlce_of_the_file_2=Times_6
+                                                     
+                                                    with open(nameas, "wb") as f2:
+                                                    
+                                                      
+                                                        f2.write(width_bits3)
+
+                                                    x2 = time()
+                                                    x3=x2-x
+                                                    xs=float(x3)
+                                                    return print(x3)
                                    
 
                                     
@@ -765,7 +791,8 @@ class compression:
                                         
                                         
                                           
-                                            
+                                        
+                                                
                                         if  Circle_times2==T_Real:
                                         	   
                                             if C==1 and T==0:
