@@ -625,25 +625,35 @@ class compression:
                                                             Number_zeroes1+=1
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_18
 
+                                                    lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                    add_bits=""
+                                                    count_bits=8-lenf%8
+                                                    z=0
+                                                    if count_bits!=0:
+                                                            if count_bits!=8:
+                                                                    while z<count_bits:
+                                                                            add_bits="0"+add_bits
+                                                                            z=z+1
+
+                                                    Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+
                                                     L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                         
+
                                                     n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
+
                                                     width_bits=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+
                                                     width_bits=(width_bits//8)*2
+
                                                     width_bits=str(width_bits)
                                                     width_bits="%0"+width_bits+"x"
                                                     width_bits3=binascii.unhexlify(width_bits % n)
                                                     width_bits2=len(width_bits3)
-
                                                     add_bitszzza=""
                                                     add_bitszs=""
                                                     Equal_info_between_of_the_cirlce_of_the_file_2=Times_6
-                                                     
                                                     with open(nameas, "wb") as f2:
-                                                    
-                                                      
-                                                        f2.write(width_bits3)
-
+                                                            f2.write(width_bits3)
                                                     x2 = time()
                                                     x3=x2-x
                                                     xs=float(x3)
@@ -652,7 +662,7 @@ class compression:
 
                                     
                                     Corrupted=len(sda)
-                                    if Corrupted<15 or Corrupted>5: 
+                                    if Corrupted<15 and Corrupted>5: 
                                             with open(nameas, "wb") as f2:
                                             
                                             
