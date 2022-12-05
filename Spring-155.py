@@ -652,7 +652,7 @@ class compression:
 
                                     
                                     Corrupted=len(sda)
-                                    if Corrupted<15 and Corrupted>5: 
+                                    if Corrupted<15 or Corrupted>5: 
                                             with open(nameas, "wb") as f2:
                                             
                                             
