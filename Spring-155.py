@@ -203,7 +203,7 @@ class compression:
                                                     Nuber_zero_or_else=int(sda,2)
                                                     long_of_file+=1
                                                     #print(long_of_file)
-                                                    if Nuber_zero_or_else==0 and long_of_file<(2**40):
+                                                    if Nuber_zero_or_else==0 and long_of_file<(2**112):
                                                                                                  long_of_file_N=format(long_of_file,'08b')
                                                                                                  Compress_zeros=long_of_file_N
                                                                                              
@@ -622,7 +622,7 @@ class compression:
                                    
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                                     lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                    if  len(sda)<6*8:
+                                    if  len(sda)14*8:
                                                  
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17
                                                     #print(Number_zeroes)
@@ -672,20 +672,20 @@ class compression:
                                    
 
                                     
-                                    Corrupted=len(sda)
-                                    if Corrupted<15 and Corrupted>5: 
-                                            with open(nameas, "wb") as f2:
+                                   
+                   
+                               
                                             
                                             
-                                                f2.write(width_bits3)
+                                              
 
                                             
-                                            x2 = time()
-                                            x3=x2-x
-                                            xs=float(x3)
-                                            return print(x3)
+                                           
+                                            
+                           
+                       
                                                             
-                                                            
+                                              
                               
                                     Equal_info_between_of_the_cirlce_of_the_file=Equal_info_between_of_the_cirlce_of_the_file_2
                                    
