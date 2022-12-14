@@ -622,7 +622,7 @@ class compression:
                                    
                                     Equal_info_between_of_the_cirlce_of_the_file_17=""
                                     lenf9=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                    if  len(sda)14*8:
+                                    if  len(sda)<=(14*8):
                                                  
                                                     Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file_17
                                                     #print(Number_zeroes)
