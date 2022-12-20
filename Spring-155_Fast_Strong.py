@@ -387,7 +387,7 @@ class compression:
                                                 
                                                 
                                                                                           
-                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//2**24
                                                              
                                                         if len(sda)>Number_of_the_file:
                                                                Times_10=0
@@ -793,7 +793,7 @@ class compression:
                                                         Hole_Number_information=(2**Deep5)-1
                                                         add_ones_together=Hole_Number_information
                                                         Reality2+=1
-                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//2**24
                                                         #print(Number_of_the_file)
                                              
                                     #####################################################################################################################################################
