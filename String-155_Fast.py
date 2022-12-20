@@ -93,6 +93,7 @@ class compression:
                     D=0
                     E=0
                     F=0
+                    G=0
 
                     
                     
@@ -238,6 +239,7 @@ class compression:
                                               
                                             if F==1:
                                               Times_10-=1
+                                              G=1
                                                                               
                                            
                                             if N_5==(2**24)-1:
@@ -293,10 +295,10 @@ class compression:
                                             
                                             Info=Equal_info_between_of_the_cirlce_of_the_file4
                                             
-                                            
-                                            #B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
-                                            #if B>A:
-                                                #Times_10=0
+                                            if G==1:
+                                                 B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
+                                                 if B>A:
+                                                        Times_10=0
                                                 
                                             
                                             #print(B)
