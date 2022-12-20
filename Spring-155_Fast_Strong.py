@@ -230,7 +230,7 @@ class compression:
                                           
                                             circuit.rx(N_5,0)
                                             N_5+=1 
-                                            
+                                            Times_11+=1
                                             
                                                                               
                                            
@@ -244,7 +244,7 @@ class compression:
                                                 circuit.rx(Times_11,0)  
                                                 
                                                 Times_10=1
-                                                Times_11+=1
+                                                
 
                                             if Times_11==(2**4000000)-1:
                                                 
