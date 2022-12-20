@@ -215,9 +215,9 @@ class compression:
                                     Extract1=0
                                     Times_10=1
                                     Times_7=0
-                                    Times_11=-1
+                                    Times_11=0
                                     
-                                    N_5=-1
+                                    N_5=0
                                     
 
                                     while Extract1!=1:
