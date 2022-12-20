@@ -430,7 +430,7 @@ class compression:
                                                 if  Circle_times2==T:
                                                         Circle_times2=0
                                                         
-                                                        if len(sda)>=Number_of_the_file:  
+                                                        if len(sda)<=Number_of_the_file:  
                                                                if C==1 and T==0:
                                                                        Equal_info_between_of_the_cirlce_of_the_file_17=sda
                                                                        lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
@@ -464,7 +464,7 @@ class compression:
 
                                                                        Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                                                 #print(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                if len(sda)>=Number_of_the_file:   
+                                                if len(sda)<=Number_of_the_file:   
                                                        lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                                        add_bits=""
                                                        count_bits=8-lenf%8
