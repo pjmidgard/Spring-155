@@ -387,7 +387,7 @@ class compression:
                                                                                           
                                                         Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
                                                              
-                                                        if len(sda)>Number_of_the_file:
+                                                        if len(sda)<Number_of_the_file:
                                                                Times_10=0
                                                         
                                                         Times_half_Real+=1
