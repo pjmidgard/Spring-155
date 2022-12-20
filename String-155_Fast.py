@@ -233,13 +233,13 @@ class compression:
                                             circuit.rx(N_5,0)
                                             N_5+=1 
                                             Times_11+=1
-                                            
-                                            if F==0:
-                                              Times_10+=1
-                                              
-                                            if F==1:
-                                              Times_10-=1
-                                              G=1
+                                            if G==0:
+                                                   if F==0:
+                                                     Times_10+=1
+
+                                                   if F==1:
+                                                     Times_10-=1
+                                                     G=1
                                                                               
                                            
                                             if N_5==(2**24)-1:
