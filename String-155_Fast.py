@@ -91,9 +91,7 @@ class compression:
                     Translate_info_Decimal=""
 
                     D=0
-                    E=0
-                    F=0
-                    G=0
+                    
 
                     
                     
@@ -210,7 +208,7 @@ class compression:
                                                                                                  long_of_file_N=format(long_of_file,'08b')
                                                                                                  Compress_zeros=long_of_file_N
                                                                                              
-                                    from qiskit.circuit import QuantumCircuit, Parameter, ParameterVector
+                                    from qiskit.circuit import QuantumCircuit
                                    
                                     circuit = QuantumCircuit(2000) 
                                     
@@ -233,13 +231,7 @@ class compression:
                                             circuit.rx(N_5,0)
                                             N_5+=1 
                                             Times_11+=1
-                                            if G==0:
-                                                   if F==0:
-                                                     Times_10+=1
-
-                                                   if F==1:
-                                                     Times_10-=1
-                                                     G=1
+                                            
                                                                               
                                            
                                             if N_5==(2**24)-1:
@@ -295,10 +287,10 @@ class compression:
                                             
                                             Info=Equal_info_between_of_the_cirlce_of_the_file4
                                             
-                                            if G==1:
-                                                 B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
-                                                 if B>A:
-                                                        Times_10=0
+                                            
+                                             #B=int(Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+Info,2)
+                                             #if B>A:
+                                                #Times_10=0
                                                 
                                             
                                             #print(B)
@@ -397,11 +389,7 @@ class compression:
                                                                                           
                                                         Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
                                                   
-                                                        if E<A:
-                                                          F=0
-                                                        if E>A:
-                                                          F=1
-                                                          
+                                                        
                                                         Times_half_Real+=1
                                                         
                                                         
@@ -442,173 +430,173 @@ class compression:
                                                 if  Circle_times2==T:
                                                         Circle_times2=0
                                                         
-                                                           
-                                                        if C==1 and T==0:
-                                                                Equal_info_between_of_the_cirlce_of_the_file_17=sda
-                                                                lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                                add_bits=""
-                                                                count_bits=8-lenf%8
-                                                                z=0
-                                                                if count_bits!=0:
-                                                                        if count_bits!=8:
-                                                                            while z<count_bits:
-                                                                                add_bits="0"+add_bits
-                                                                                z=z+1
-                                                                Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
-                                                
-                                                        if C==1 and T!=0:
-                 
-                                                                Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
-                                                                lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                                
-                                                                
-                                                                
-                                                                lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                                add_bits=""
-                                                                count_bits=8-lenf%8
-                                                                z=0
-                                                                if count_bits!=0:
-                                                                        if count_bits!=8:
-                                                                            while z<count_bits:
-                                                                                add_bits="0"+add_bits
-                                                                                z=z+1
-                                                       
+                                                        if sda>=A:   
+                                                               if C==1 and T==0:
+                                                                       Equal_info_between_of_the_cirlce_of_the_file_17=sda
+                                                                       lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                                       add_bits=""
+                                                                       count_bits=8-lenf%8
+                                                                       z=0
+                                                                       if count_bits!=0:
+                                                                               if count_bits!=8:
+                                                                                   while z<count_bits:
+                                                                                       add_bits="0"+add_bits
+                                                                                       z=z+1
+                                                                       Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
 
-                                                                Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
-                                                         #print(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                               if C==1 and T!=0:
 
-                                                lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                add_bits=""
-                                                count_bits=8-lenf%8
-                                                z=0
-                                                if count_bits!=0:
-                                                        if count_bits!=8:
-                                                                while z<count_bits:
-                                                                        add_bits="0"+add_bits
-                                                                        z=z+1
-                                                Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17        
-                                                
+                                                                       Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                                                       lenf14=len(Equal_info_between_of_the_cirlce_of_the_file_17)
 
 
-                                                
 
-                                                
-
-
-                                                Time_Real=bin(lenf2)[2:]
-                                                T1=len(Time_Real)
-                                                T2=(T1//8)+1
-                                                T2=T2*8
-                                                
-                                                C="0"+str(T2)+"b"
-                                                Time_Real3=format(lenf2,C)
-                                                T1=len(Time_Real3)
-                                                Time_Real1=format(T1,'08b')
-                                                long3=Time_Real1+Time_Real3
-
-                                                
+                                                                       lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                                       add_bits=""
+                                                                       count_bits=8-lenf%8
+                                                                       z=0
+                                                                       if count_bits!=0:
+                                                                               if count_bits!=8:
+                                                                                   while z<count_bits:
+                                                                                       add_bits="0"+add_bits
+                                                                                       z=z+1
 
 
-                                                Time_Real=bin(Times_11)[2:]
-                                                T1=len(Time_Real)
-                                                T2=(T1//8)+1
-                                                T2=T2*8
-                                                
-                                                C="0"+str(T2)+"b"
-                                                Time_Real3=format(Times_11,C)
-                                                T1=len(Time_Real3)
-                                                Time_Real1=format(T1,'08b')
-                                                Add_N=Time_Real1+Time_Real3
-
-                                                
-                                            
-
-            
-                                                Time_Real=bin(T)[2:]
-                                                T1=len(Time_Real)
-                                                T2=(T1//8)+1
-                                                T2=T2*8
-                                                
-                                                C="0"+str(T2)+"b"
-                                                Time_Real3=format(T,C)
-                                                T1=len(Time_Real3)
-                                                Time_Real1=format(T1,'016b')
-                                                Time_Real2=Time_Real1+Time_Real3
-                                                
-                                                
-
-                                                
-
-                                                Time_Real=bin(N_5)[2:]
-                                                T1=len(Time_Real)
-                                                T2=(T1//8)+1
-                                                T2=T2*8
-                                                
-                                                C="0"+str(T2)+"b"
-                                                Time_Real3=format(N_5,C)
-                                                T1=len(Time_Real3)
-                                                Time_Real1=format(T1,'08b')
-                                                Equal_info_between_of_the_cirlce_of_the_file2=Time_Real1+Time_Real3
-                                                
+                                                                       Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                                                #print(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                if sda>=A:   
+                                                       lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                       add_bits=""
+                                                       count_bits=8-lenf%8
+                                                       z=0
+                                                       if count_bits!=0:
+                                                               if count_bits!=8:
+                                                                       while z<count_bits:
+                                                                               add_bits="0"+add_bits
+                                                                               z=z+1
+                                                       Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17        
 
 
-                                                
-                                                
 
-                                                Time_Real=bin(Times_10)[2:]
-                                                T1=len(Time_Real)
-                                                T2=(T1//8)+1
-                                                T2=T2*8
-                                                
-                                                C="0"+str(T2)+"b"
-                                                Time_Real3=format(Times_10,C)
-                                                T1=len(Time_Real3)
-                                                Time_Real1=format(T1,'08b')
-                                                Equal_info_between_of_the_cirlce_of_the_file3=Time_Real1+Time_Real3
-                                            
-                                            
 
-                                        
-                                               
-                                                Time_Real=bin(Times_half_Real)[2:]
-                                                T1=len(Time_Real)
-                                                T2=(T1//8)+1
-                                                T2=T2*8
-                                                
-                                                C="0"+str(T2)+"b"
-                                                Time_Real3=format(Times_half_Real,C)
-                                                T1=len(Time_Real3)
-                                                Time_Real1=format(T1,'016b')
-                                                Reality=Time_Real1+Time_Real3
-                                                #print(T)
-                                                
-                                                
 
-                                                
-                                                              
-                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
 
-                                                     
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Info
-                                                        Extract1=1
 
-                                                if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+sda
-                                                        Extract1=1  
-                                                if int(sda,2)==0:
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
-                                                        lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
-                                                        add_bits=""
-                                                        count_bits=8-lenf%8
-                                                        z=0
-                                                        if count_bits!=0:
-                                                            if count_bits!=8:
-                                                                while z<count_bits:
-                                                                        add_bits="0"+add_bits
-                                                                        z=z+1
-                                                                                                                         
-                                                        Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
-                                                        Extract1=1
+
+                                                       Time_Real=bin(lenf2)[2:]
+                                                       T1=len(Time_Real)
+                                                       T2=(T1//8)+1
+                                                       T2=T2*8
+
+                                                       C="0"+str(T2)+"b"
+                                                       Time_Real3=format(lenf2,C)
+                                                       T1=len(Time_Real3)
+                                                       Time_Real1=format(T1,'08b')
+                                                       long3=Time_Real1+Time_Real3
+
+
+
+
+                                                       Time_Real=bin(Times_11)[2:]
+                                                       T1=len(Time_Real)
+                                                       T2=(T1//8)+1
+                                                       T2=T2*8
+
+                                                       C="0"+str(T2)+"b"
+                                                       Time_Real3=format(Times_11,C)
+                                                       T1=len(Time_Real3)
+                                                       Time_Real1=format(T1,'08b')
+                                                       Add_N=Time_Real1+Time_Real3
+
+
+
+
+
+                                                       Time_Real=bin(T)[2:]
+                                                       T1=len(Time_Real)
+                                                       T2=(T1//8)+1
+                                                       T2=T2*8
+
+                                                       C="0"+str(T2)+"b"
+                                                       Time_Real3=format(T,C)
+                                                       T1=len(Time_Real3)
+                                                       Time_Real1=format(T1,'016b')
+                                                       Time_Real2=Time_Real1+Time_Real3
+
+
+
+
+
+                                                       Time_Real=bin(N_5)[2:]
+                                                       T1=len(Time_Real)
+                                                       T2=(T1//8)+1
+                                                       T2=T2*8
+
+                                                       C="0"+str(T2)+"b"
+                                                       Time_Real3=format(N_5,C)
+                                                       T1=len(Time_Real3)
+                                                       Time_Real1=format(T1,'08b')
+                                                       Equal_info_between_of_the_cirlce_of_the_file2=Time_Real1+Time_Real3
+
+
+
+
+
+
+                                                       Time_Real=bin(Times_10)[2:]
+                                                       T1=len(Time_Real)
+                                                       T2=(T1//8)+1
+                                                       T2=T2*8
+
+                                                       C="0"+str(T2)+"b"
+                                                       Time_Real3=format(Times_10,C)
+                                                       T1=len(Time_Real3)
+                                                       Time_Real1=format(T1,'08b')
+                                                       Equal_info_between_of_the_cirlce_of_the_file3=Time_Real1+Time_Real3
+
+
+
+
+
+                                                       Time_Real=bin(Times_half_Real)[2:]
+                                                       T1=len(Time_Real)
+                                                       T2=(T1//8)+1
+                                                       T2=T2*8
+
+                                                       C="0"+str(T2)+"b"
+                                                       Time_Real3=format(Times_half_Real,C)
+                                                       T1=len(Time_Real3)
+                                                       Time_Real1=format(T1,'016b')
+                                                       Reality=Time_Real1+Time_Real3
+                                                       #print(T)
+
+
+
+
+
+                                                       if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T!=0:
+
+
+                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Info
+                                                               Extract1=1
+
+                                                       if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
+                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+sda
+                                                               Extract1=1  
+                                                       if int(sda,2)==0:
+                                                               Equal_info_between_of_the_cirlce_of_the_file_17=Compress_zeros
+                                                               lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
+                                                               add_bits=""
+                                                               count_bits=8-lenf%8
+                                                               z=0
+                                                               if count_bits!=0:
+                                                                   if count_bits!=8:
+                                                                       while z<count_bits:
+                                                                               add_bits="0"+add_bits
+                                                                               z=z+1
+
+                                                               Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
+                                                               Extract1=1
                                                     
                                                         
                                     if Extract1==1:                
