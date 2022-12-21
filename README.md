@@ -9,7 +9,7 @@ Deep: 7
 
 7+25=32 bits.
 
-This compression Quantum software is for Quantum Supercomputers 4000 cubits.
+This compression Quantum software is for Quantum Supercomputers 2000 cubits.
 
 How to use:
 pip install qiskit
