@@ -366,31 +366,32 @@ class compression:
                                                         
             
                                                 if C==1 and T!=0:
+                                                    if T==1:
                                                         Equal_info_between_of_the_cirlce_of_the_file4=Equal_info_between_of_the_cirlce_of_the_file4
-                                                        lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
+                                                    lenf6=len(Equal_info_between_of_the_cirlce_of_the_file4)
                                                        
                                                         
-                                                       
-                                                        if len (Equal_info_between_of_the_cirlce_of_the_file4)!=0:
-                        
-                                                                                                    
-                                                            Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file4, 2)
-                                                                                                     
+                                                    if T==1:       
+                                                            if len (Equal_info_between_of_the_cirlce_of_the_file4)!=0:
+                            
+                                                                if T==1:                                        
+                                                                    Number_of_the_file=int(Equal_info_between_of_the_cirlce_of_the_file4, 2)
+                                                                                                        
 
-                                                        else:
-                                                            Number_of_the_file=0
+                                                            else:
+                                                                Number_of_the_file=0
                                           
-                                                        Hole_Number_information=(2**Deep5)-1
-                                                        add_ones_together=Hole_Number_information
+                                                    Hole_Number_information=(2**Deep5)-1
+                                                    add_ones_together=Hole_Number_information
                                                 
                                                 
                                                                                           
-                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                    Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
                                                              
-                                                        if int(sda,2)<Number_of_the_file:
-                                                               Times_10=0
+                                                    if int(sda,2)<Number_of_the_file:
+                                                             Times_10=0
                                                         
-                                                        Times_half_Real+=1
+                                                    Times_half_Real+=1
                                                         
                                                         
                                                         
@@ -408,10 +409,10 @@ class compression:
                                            
                                             
                                             
-                                            
-                                            Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
+                                            if int(sda,2)<=Number_of_the_file:
+                                                Equal_info_between_of_the_cirlce_of_the_file_17=bin(Number_of_the_file)[2:]
                                              
-                                            Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
+                                                Equal_info_between_of_the_cirlce_of_the_file_2=Equal_info_between_of_the_cirlce_of_the_file_17
                                             #print(Equal_info_between_of_the_cirlce_of_the_file_17)
                                            
     
