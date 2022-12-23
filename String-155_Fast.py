@@ -209,8 +209,10 @@ class compression:
                                                                                                  Compress_zeros=long_of_file_N
                                                                                              
                                     from qiskit.circuit import QuantumCircuit
+                                    k1=0
+                                    k2=1
                                    
-                                    circuit = QuantumCircuit(2000) 
+                                    circuit = QuantumCircuit(4002) 
                                     
                                     Extract1=0
                                     Times_10=1
@@ -227,27 +229,36 @@ class compression:
                                            
                                             
                                             
-                                          
-                                            circuit.rx(N_5,0)
-                                            N_5+=1 
-                                            Times_11+=1
+                                            k1+=1
+                                            k2+=1
+                                            if k1==4000:
+                                                k1=0
+                                                k2=1
+                                            N_5+=1
+                                        
+                                    
+                                            circuit.cp(N_5, k1, k2)
                                             
+                                            Times_11+=1
+                                            circuit.cp(Times_11,k1,k2)
                                                                               
                                            
                                             if N_5==(2**24)-1:
-                                                circuit.rx(Times_10,0)
+                                            
                                                 
                                                 Times_10+=1
+                                                circuit.cp(Times_10,k1,k2)
                                          
                                                 N_5=0
                                             if Times_10==(2**24)-1:
-                                                circuit.rx(Times_11,0)  
+                                         
                                                 
                                                 Times_10=1
                                             if Times_11==(2**32)-1:
                                                 
-                                                circuit.rx(Times_7,0)
+                                                
                                                 Times_7+=1
+                                                circuit.cp(Times_7,k1,k2)
                                                
                                                 Times_11=0
                                              
@@ -385,7 +396,7 @@ class compression:
                                                 
                                                 
                                                                                           
-                                                        Number_of_the_file=((Number_of_the_file*add_ones_together)+Add)//3
+                                                        Number_of_the_file=int(((Number_of_the_file*add_ones_together)+Add)//3)
                                                              
                                                         if int(sda,2)<Number_of_the_file:
                                                                Times_10=0
