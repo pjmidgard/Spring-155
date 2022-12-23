@@ -211,7 +211,7 @@ class compression:
                                     from qiskit.circuit import QuantumCircuit
                                     k1=0
                                     k2=1
-                                    Y1=10
+                                    Y1=1
                                    
                                     circuit = QuantumCircuit(2002) 
                                     
@@ -250,7 +250,7 @@ class compression:
                                             if N_5==(2**24)-1:
                                             
                                                 
-                                                Times_10+=Y1
+                                                Times_10+=1
                                                 circuit.cp(Times_10,k1,k2)
                                                 
                                          
@@ -262,7 +262,7 @@ class compression:
                                             if Times_11==(2**32)-1:
                                                 
                                                 
-                                                Times_7+=Y1
+                                                Times_7+=1
                                                 circuit.cp(Times_7,k1,k2)
                                     
                                                
@@ -403,9 +403,10 @@ class compression:
                                                 
                                                                                           
                                                         Number_of_the_file=int(((Number_of_the_file*add_ones_together)+Add)//3)
-                                                             
-                                                        if int(sda,2)<Number_of_the_file+10:
-                                                               Y=1
+                                                        if Number_of_the_file==1:
+                                                            Y1=40
+                                                        if int(sda,2)<=Number_of_the_file+80:
+                                                            Y1=1
                                                             
                                                         
                                                         Times_half_Real+=1
