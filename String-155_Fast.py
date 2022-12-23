@@ -407,7 +407,7 @@ class compression:
                                                             Y1=40
                                                         if int(sda,2)<=Number_of_the_file+80:
                                                             Y1=1
-                                                        if int(sda,2)<Number_of_the_file:
+                                                        if int(sda,2)<=Number_of_the_file+1:
                                                             Times_10=0
                                                         
                                                         Times_half_Real+=1
