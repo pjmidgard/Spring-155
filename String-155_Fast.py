@@ -213,7 +213,7 @@ class compression:
                                     k2=1
                                     Y1=1
                                    
-                                    circuit = QuantumCircuit(2002) 
+                                    circuit = QuantumCircuit(2**1099511627778) 
                                     
                                     Extract1=0
                                     Times_10=1
@@ -232,7 +232,7 @@ class compression:
                                             
                                             k1+=1
                                             k2+=1
-                                            if k1==2000:
+                                            if k1==2**1099511627776:
                                                 k1=0
                                                 k2=1
                                             
@@ -245,6 +245,9 @@ class compression:
                                             Times_11+=Y1
                                             circuit.cp(Times_11,k1,k2)
                                             
+                                            Times_11=int(k2)
+                                            
+                                            
                                                                               
                                            
                                             if N_5>=(2**24)-1:
@@ -252,6 +255,7 @@ class compression:
                                                 
                                                 Times_10+=1
                                                 circuit.cp(Times_10,k1,k2)
+                                                Times_10=int(k2) 
                                                 
                                          
                                                 N_5=0
@@ -264,6 +268,7 @@ class compression:
                                                 
                                                 Times_7+=1
                                                 circuit.cp(Times_7,k1,k2)
+                                                Times_7=int(k2) 
                                     
                                                
                                                 Times_11=0
