@@ -11,5 +11,6 @@ Deep: 7
 
 This compression Quantum software is for Quantum Supercomputers for multiple qubits.
 
+cp= circuit polynomial
 How to use:
 pip install qiskit
