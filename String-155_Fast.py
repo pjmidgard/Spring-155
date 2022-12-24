@@ -247,7 +247,7 @@ class compression:
                                             
                                                                               
                                            
-                                            if N_5==(2**24)-1:
+                                            if N_5>=(2**24)-1:
                                             
                                                 
                                                 Times_10+=1
@@ -255,7 +255,7 @@ class compression:
                                                 
                                          
                                                 N_5=0
-                                            if Times_10==(2**24)-1:
+                                            if Times_10>=(2**24)-1:
                                          
                                                 
                                                 Times_10=1
