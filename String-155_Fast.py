@@ -213,7 +213,7 @@ class compression:
                                     k2=1
                                     Y1=1
                                    
-                                    circuit = QuantumCircuit(2**32) 
+                                    circuit = QuantumCircuit((2**32)+2) 
                                     
                                     Extract1=0
                                     Times_10=1
