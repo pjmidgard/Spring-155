@@ -211,7 +211,7 @@ class compression:
                                     from qiskit.circuit import QuantumCircuit
                                     k1=0
                                     k2=1
-                                    Y1=1
+                                    
                                    
                                     circuit = QuantumCircuit((2**32)+2) 
                                     
@@ -405,10 +405,7 @@ class compression:
                                                 
                                                                                           
                                                         Number_of_the_file=int(((Number_of_the_file*add_ones_together)+Add)//3)
-                                                        if Number_of_the_file==1:
-                                                            Y1=40
-                                                        if int(sda,2)<=Number_of_the_file+80:
-                                                            Y1=1
+                                                        
                                                         if int(sda,2)<=Number_of_the_file-1:
                                                             Times_10=0
                                                         
