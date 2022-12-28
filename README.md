@@ -16,4 +16,4 @@ cp=circuit polynomial
 How to use:
 pip install qiskit
 
-Data Encryption Program
+General-purpose compression
