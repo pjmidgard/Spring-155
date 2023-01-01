@@ -618,7 +618,7 @@ class compression:
                                                                Equal_info_between_of_the_cirlce_of_the_file_17=add_bits+Equal_info_between_of_the_cirlce_of_the_file_17
                                                                Extract1=1
                                                     
-                                    print(Extract1)              
+                                                 
                                     if Extract1==1:                
                                             L=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                             n = int(Equal_info_between_of_the_cirlce_of_the_file_17, 2)
