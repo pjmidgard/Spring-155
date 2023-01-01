@@ -450,7 +450,7 @@ class compression:
                                                         Circle_times2=0
                                                         
                                                         if int(sda,2)<=Number_of_the_file:  
-                                                               if C==1 and T==0:
+                                                               if C==1 and Times_10==0:
                                                                        Equal_info_between_of_the_cirlce_of_the_file_17=sda
                                                                        lenf=len(Equal_info_between_of_the_cirlce_of_the_file_17)
                                                                        add_bits=""
@@ -599,7 +599,7 @@ class compression:
                                                                Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+Info
                                                                Extract1=1
 
-                                                       if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and T==0:
+                                                       if Extact==Equal_info_between_of_the_cirlce_of_the_file_17 and Times_10==0:
                                                                Equal_info_between_of_the_cirlce_of_the_file_17=Equal_info_between_of_the_cirlce_of_the_file2+Equal_info_between_of_the_cirlce_of_the_file3+Add_N+long3+Time_Real2+Reality+sda
                                                                Extract1=1  
                                                        if int(sda,2)==0:
