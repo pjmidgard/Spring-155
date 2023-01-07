@@ -11,9 +11,11 @@ Deep: 7
 
 This compression Quantum software is for Quantum Supercomputers for (2**32)+2 cubits.
 
+x=(x*y)//3
+
 cp=circuit polynomial
 
 How to use:
 pip install qiskit
 
-General-purpose compression
+General-purpose compressin
