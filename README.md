@@ -18,4 +18,4 @@ cp=circuit polynomial
 How to use:
 pip install qiskit
 
-General-purpose compressin
+General-purpose compression
